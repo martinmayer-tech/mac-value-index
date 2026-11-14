@@ -1,0 +1,1898 @@
+{
+  "schemaVersion": 1,
+  "snapshotDate": "2026-01-05",
+  "geekbenchVersion": "6",
+  "defaultProfileId": "secondary-dev-llm",
+  "normalisation": {
+    "method": "divide-by-snapshot-best",
+    "description": "Each metric is divided by the best value of that metric among the listings ranked under the profile, giving zero to one."
+  },
+  "listings": [
+    {
+      "id": "00000000000000a1",
+      "title": "Mac mini, M4 Pro Chip, 12-core CPU, 16-core GPU",
+      "model": "Mac mini",
+      "year": 2024,
+      "formFactor": "desktop",
+      "chipId": "m4-pro-12c-16g",
+      "ramGb": 48,
+      "ssdGb": 1000,
+      "condition": "new",
+      "grade": null,
+      "warrantyMonths": 12,
+      "priceGbp": 1999,
+      "rrpGbp": 1999,
+      "seller": "Apple UK",
+      "sourceUrl": "https://example.com/listing",
+      "retrievedDate": "2026-01-05",
+      "collectedBy": "structured",
+      "sku": null,
+      "note": null,
+      "chip": {
+        "family": "M4 Pro",
+        "generation": 4,
+        "cpuCores": 12,
+        "performanceCores": 8,
+        "efficiencyCores": 4,
+        "gpuCores": 16,
+        "label": "M4 Pro (12-core CPU, 16-core GPU)",
+        "singleCore": 3800,
+        "multiCore": 20000,
+        "metal": 100000,
+        "memoryBandwidthGbPerSec": 273,
+        "maxMemoryGb": 64
+      },
+      "isStable": true
+    },
+    {
+      "id": "00000000000000a2",
+      "title": "Mac mini, M4 Pro Chip, 12-core CPU, 16-core GPU",
+      "model": "Mac mini",
+      "year": 2024,
+      "formFactor": "desktop",
+      "chipId": "m4-pro-12c-16g",
+      "ramGb": 48,
+      "ssdGb": 1000,
+      "condition": "apple-refurbished",
+      "grade": "Apple Certified Refurbished",
+      "warrantyMonths": 12,
+      "priceGbp": 1699,
+      "rrpGbp": 1999,
+      "seller": "Apple UK",
+      "sourceUrl": "https://example.com/listing",
+      "retrievedDate": "2026-01-05",
+      "collectedBy": "structured",
+      "sku": null,
+      "note": null,
+      "chip": {
+        "family": "M4 Pro",
+        "generation": 4,
+        "cpuCores": 12,
+        "performanceCores": 8,
+        "efficiencyCores": 4,
+        "gpuCores": 16,
+        "label": "M4 Pro (12-core CPU, 16-core GPU)",
+        "singleCore": 3800,
+        "multiCore": 20000,
+        "metal": 100000,
+        "memoryBandwidthGbPerSec": 273,
+        "maxMemoryGb": 64
+      },
+      "isStable": true
+    },
+    {
+      "id": "00000000000000a3",
+      "title": "Mac mini, M4 Chip, 10-core CPU, 10-core GPU",
+      "model": "Mac mini",
+      "year": 2024,
+      "formFactor": "desktop",
+      "chipId": "m4-10c-10g",
+      "ramGb": 16,
+      "ssdGb": 512,
+      "condition": "new",
+      "grade": null,
+      "warrantyMonths": 12,
+      "priceGbp": 799,
+      "rrpGbp": 799,
+      "seller": "Apple UK",
+      "sourceUrl": "https://example.com/listing",
+      "retrievedDate": "2026-01-05",
+      "collectedBy": "structured",
+      "sku": null,
+      "note": null,
+      "chip": {
+        "family": "M4",
+        "generation": 4,
+        "cpuCores": 10,
+        "performanceCores": 4,
+        "efficiencyCores": 6,
+        "gpuCores": 10,
+        "label": "M4 (10-core CPU, 10-core GPU)",
+        "singleCore": 3747,
+        "multiCore": 14978,
+        "metal": 56075,
+        "memoryBandwidthGbPerSec": 120,
+        "maxMemoryGb": 32
+      },
+      "isStable": true
+    },
+    {
+      "id": "00000000000000a4",
+      "title": "Mac mini, M4 Pro Chip, 12-core CPU, 16-core GPU",
+      "model": "Mac mini",
+      "year": 2024,
+      "formFactor": "desktop",
+      "chipId": "m4-10c-10g",
+      "ramGb": 8,
+      "ssdGb": 512,
+      "condition": "new",
+      "grade": null,
+      "warrantyMonths": 12,
+      "priceGbp": 599,
+      "rrpGbp": 1999,
+      "seller": "Apple UK",
+      "sourceUrl": "https://example.com/listing",
+      "retrievedDate": "2026-01-05",
+      "collectedBy": "structured",
+      "sku": null,
+      "note": null,
+      "chip": {
+        "family": "M4",
+        "generation": 4,
+        "cpuCores": 10,
+        "performanceCores": 4,
+        "efficiencyCores": 6,
+        "gpuCores": 10,
+        "label": "M4 (10-core CPU, 10-core GPU)",
+        "singleCore": 3747,
+        "multiCore": 14978,
+        "metal": 56075,
+        "memoryBandwidthGbPerSec": 120,
+        "maxMemoryGb": 32
+      },
+      "isStable": false
+    },
+    {
+      "id": "00000000000000a5",
+      "title": "Mac mini, M4 Pro Chip, 12-core CPU, 16-core GPU",
+      "model": "Mac mini",
+      "year": 2024,
+      "formFactor": "desktop",
+      "chipId": "m4-10c-10g",
+      "ramGb": 16,
+      "ssdGb": 256,
+      "condition": "new",
+      "grade": null,
+      "warrantyMonths": 12,
+      "priceGbp": 599,
+      "rrpGbp": 1999,
+      "seller": "Apple UK",
+      "sourceUrl": "https://example.com/listing",
+      "retrievedDate": "2026-01-05",
+      "collectedBy": "structured",
+      "sku": null,
+      "note": null,
+      "chip": {
+        "family": "M4",
+        "generation": 4,
+        "cpuCores": 10,
+        "performanceCores": 4,
+        "efficiencyCores": 6,
+        "gpuCores": 10,
+        "label": "M4 (10-core CPU, 10-core GPU)",
+        "singleCore": 3747,
+        "multiCore": 14978,
+        "metal": 56075,
+        "memoryBandwidthGbPerSec": 120,
+        "maxMemoryGb": 32
+      },
+      "isStable": false
+    },
+    {
+      "id": "00000000000000a6",
+      "title": "MacBook Pro, 16-inch, M4 Max Chip, 16-core CPU, 40-core GPU",
+      "model": "MacBook Pro 16-inch",
+      "year": 2024,
+      "formFactor": "laptop",
+      "chipId": "m4-max-16c-40g",
+      "ramGb": 128,
+      "ssdGb": 2000,
+      "condition": "new",
+      "grade": null,
+      "warrantyMonths": 12,
+      "priceGbp": 5199.5,
+      "rrpGbp": 5199.5,
+      "seller": "Apple UK",
+      "sourceUrl": "https://example.com/listing",
+      "retrievedDate": "2026-01-05",
+      "collectedBy": "structured",
+      "sku": null,
+      "note": null,
+      "chip": {
+        "family": "M4 Max",
+        "generation": 4,
+        "cpuCores": 16,
+        "performanceCores": null,
+        "efficiencyCores": null,
+        "gpuCores": 40,
+        "label": "M4 Max (16-core CPU, 40-core GPU)",
+        "singleCore": 3880,
+        "multiCore": 25760,
+        "metal": 179746,
+        "memoryBandwidthGbPerSec": 546,
+        "maxMemoryGb": 128
+      },
+      "isStable": true
+    },
+    {
+      "id": "00000000000000a7",
+      "title": "Mac Studio, M5 Ultra Chip, 30-core CPU, 64-core GPU",
+      "model": "Mac Studio",
+      "year": 2024,
+      "formFactor": "desktop",
+      "chipId": "m5-ultra-30c-64g",
+      "ramGb": 96,
+      "ssdGb": 1000,
+      "condition": "new",
+      "grade": null,
+      "warrantyMonths": 12,
+      "priceGbp": 5499,
+      "rrpGbp": 1999,
+      "seller": "Apple UK",
+      "sourceUrl": "https://example.com/listing",
+      "retrievedDate": "2026-01-05",
+      "collectedBy": "structured",
+      "sku": null,
+      "note": null,
+      "chip": {
+        "family": "M5 Ultra",
+        "generation": 5,
+        "cpuCores": 30,
+        "performanceCores": 30,
+        "efficiencyCores": 0,
+        "gpuCores": 64,
+        "label": "M5 Ultra (30-core CPU, 64-core GPU)",
+        "singleCore": 4318,
+        "multiCore": 37777,
+        "metal": null,
+        "memoryBandwidthGbPerSec": 1200,
+        "maxMemoryGb": null
+      },
+      "isStable": false
+    },
+    {
+      "id": "00000000000000a8",
+      "title": "iMac, 24-inch, M6 Chip, 10-core CPU, 10-core GPU",
+      "model": "iMac 24-inch",
+      "year": 2024,
+      "formFactor": "desktop",
+      "chipId": "m6-10c-10g",
+      "ramGb": 16,
+      "ssdGb": 512,
+      "condition": "new",
+      "grade": null,
+      "warrantyMonths": 12,
+      "priceGbp": 1699,
+      "rrpGbp": 1999,
+      "seller": "Apple UK",
+      "sourceUrl": "https://example.com/listing",
+      "retrievedDate": "2026-01-05",
+      "collectedBy": "structured",
+      "sku": null,
+      "note": null,
+      "chip": {
+        "family": "M6",
+        "generation": 6,
+        "cpuCores": 10,
+        "performanceCores": 5,
+        "efficiencyCores": 5,
+        "gpuCores": 10,
+        "label": "M6 (10-core CPU, 10-core GPU)",
+        "singleCore": 4561,
+        "multiCore": 18758,
+        "metal": 60000,
+        "memoryBandwidthGbPerSec": null,
+        "maxMemoryGb": 24
+      },
+      "isStable": false
+    },
+    {
+      "id": "00000000000000a9",
+      "title": "Mac mini, M4 Pro Chip, 12-core CPU, 16-core GPU",
+      "model": "Mac mini",
+      "year": 2024,
+      "formFactor": "desktop",
+      "chipId": "m4-pro-12c-16g",
+      "ramGb": 48,
+      "ssdGb": 1000,
+      "condition": "third-party-refurbished",
+      "grade": "Excellent",
+      "warrantyMonths": 12,
+      "priceGbp": 2099,
+      "rrpGbp": 1999,
+      "seller": "Example Refurb",
+      "sourceUrl": "https://example.com/listing",
+      "retrievedDate": "2026-01-05",
+      "collectedBy": "agent",
+      "sku": null,
+      "note": null,
+      "chip": {
+        "family": "M4 Pro",
+        "generation": 4,
+        "cpuCores": 12,
+        "performanceCores": 8,
+        "efficiencyCores": 4,
+        "gpuCores": 16,
+        "label": "M4 Pro (12-core CPU, 16-core GPU)",
+        "singleCore": 3800,
+        "multiCore": 20000,
+        "metal": 100000,
+        "memoryBandwidthGbPerSec": 273,
+        "maxMemoryGb": 64
+      },
+      "isStable": true
+    }
+  ],
+  "profiles": [
+    {
+      "profile": {
+        "schemaVersion": 1,
+        "id": "secondary-dev-llm",
+        "name": "Secondary development machine with local LLMs",
+        "description": "Docker, Xcode and several local LLMs.",
+        "isDefault": true,
+        "weights": {
+          "multiCore": 30,
+          "memoryHeadroom": 35,
+          "gpuAndBandwidth": 15,
+          "singleCore": 10,
+          "usableStorage": 10
+        },
+        "gpuAndBandwidthSplit": {
+          "metal": 50,
+          "memoryBandwidth": 50
+        },
+        "reservations": {
+          "memoryGb": 12,
+          "storageGb": 150,
+          "assumption": "macOS, Docker and Xcode."
+        },
+        "floors": {
+          "minRamGb": 16,
+          "minSsdGb": 512
+        },
+        "belowSmallestClassLabel": "below 7B",
+        "modelClasses": [
+          {
+            "label": "7B",
+            "minHeadroomGb": 6,
+            "assumption": "About 5 GB at 4-bit."
+          },
+          {
+            "label": "14B",
+            "minHeadroomGb": 11,
+            "assumption": "About 10 GB at 4-bit."
+          },
+          {
+            "label": "32B",
+            "minHeadroomGb": 22,
+            "assumption": "About 20 GB at 4-bit."
+          },
+          {
+            "label": "70B",
+            "minHeadroomGb": 45,
+            "assumption": "About 42 GB at 4-bit."
+          },
+          {
+            "label": "120B+",
+            "minHeadroomGb": 75,
+            "assumption": "About 72 GB at 4-bit."
+          }
+        ],
+        "priceBands": [
+          {
+            "id": "under-1000",
+            "label": "Under £1,000",
+            "minGbp": 0,
+            "maxGbp": 1000
+          },
+          {
+            "id": "1000-2000",
+            "label": "£1,000–£2,000",
+            "minGbp": 1000,
+            "maxGbp": 2000
+          },
+          {
+            "id": "2000-3500",
+            "label": "£2,000–£3,500",
+            "minGbp": 2000,
+            "maxGbp": 3500
+          },
+          {
+            "id": "over-3500",
+            "label": "Over £3,500",
+            "minGbp": 3500,
+            "maxGbp": null
+          }
+        ],
+        "externalStorage": {
+          "product": "Example 2TB Thunderbolt SSD",
+          "capacityGb": 2000,
+          "priceGbp": 300,
+          "sourceUrl": "https://example.com/ssd",
+          "retrievedDate": "2026-01-05"
+        }
+      },
+      "ranking": [
+        {
+          "listingId": "00000000000000a3",
+          "rank": 1,
+          "capabilityScore": 34.25230442770349,
+          "valueScore": 42.86896674305819,
+          "components": {
+            "multiCore": {
+              "raw": 14978,
+              "normalised": 0.581444099378882,
+              "weighted": 17.44332298136646
+            },
+            "memoryHeadroom": {
+              "raw": 4,
+              "normalised": 0.034482758620689655,
+              "weighted": 1.206896551724138
+            },
+            "gpuAndBandwidth": {
+              "raw": 0.2658741095340519,
+              "normalised": 0.2658741095340519,
+              "weighted": 3.9881116430107784
+            },
+            "singleCore": {
+              "raw": 3747,
+              "normalised": 0.9657216494845361,
+              "weighted": 9.657216494845361
+            },
+            "usableStorage": {
+              "raw": 362,
+              "normalised": 0.19567567567567568,
+              "weighted": 1.9567567567567568
+            }
+          },
+          "derived": {
+            "memoryHeadroomGb": 4,
+            "modelClass": "below 7B",
+            "usableStorageGb": 362,
+            "gbpPer1000MultiCore": 53.34490586193083,
+            "gbpPerGbRam": 49.9375,
+            "gbpPerGbUsableStorage": 2.207182320441989
+          },
+          "isParetoOptimal": true,
+          "isTop10": true,
+          "summary": "Mac mini M4 10/10-core 16GB 512GB (new) is £799, scores 14,978 multi-core, runs only models below 7B, and stores 362 GB usable."
+        },
+        {
+          "listingId": "00000000000000a2",
+          "rank": 2,
+          "capabilityScore": 56.464958063771306,
+          "valueScore": 33.23423076148988,
+          "components": {
+            "multiCore": {
+              "raw": 20000,
+              "normalised": 0.7763975155279503,
+              "weighted": 23.29192546583851
+            },
+            "memoryHeadroom": {
+              "raw": 36,
+              "normalised": 0.3103448275862069,
+              "weighted": 10.862068965517242
+            },
+            "gpuAndBandwidth": {
+              "raw": 0.5281703069887508,
+              "normalised": 0.5281703069887508,
+              "weighted": 7.922554604831261
+            },
+            "singleCore": {
+              "raw": 3800,
+              "normalised": 0.979381443298969,
+              "weighted": 9.79381443298969
+            },
+            "usableStorage": {
+              "raw": 850,
+              "normalised": 0.4594594594594595,
+              "weighted": 4.594594594594595
+            }
+          },
+          "derived": {
+            "memoryHeadroomGb": 36,
+            "modelClass": "32B",
+            "usableStorageGb": 850,
+            "gbpPer1000MultiCore": 84.95,
+            "gbpPerGbRam": 35.395833333333336,
+            "gbpPerGbUsableStorage": 1.9988235294117647
+          },
+          "isParetoOptimal": true,
+          "isTop10": true,
+          "summary": "Mac mini M4 Pro 12/16-core 48GB 1TB (Apple refurbished) is £1,699, scores 20,000 multi-core, runs models up to 32B, and stores 850 GB usable."
+        },
+        {
+          "listingId": "00000000000000a1",
+          "rank": 3,
+          "capabilityScore": 56.464958063771306,
+          "valueScore": 28.246602333052177,
+          "components": {
+            "multiCore": {
+              "raw": 20000,
+              "normalised": 0.7763975155279503,
+              "weighted": 23.29192546583851
+            },
+            "memoryHeadroom": {
+              "raw": 36,
+              "normalised": 0.3103448275862069,
+              "weighted": 10.862068965517242
+            },
+            "gpuAndBandwidth": {
+              "raw": 0.5281703069887508,
+              "normalised": 0.5281703069887508,
+              "weighted": 7.922554604831261
+            },
+            "singleCore": {
+              "raw": 3800,
+              "normalised": 0.979381443298969,
+              "weighted": 9.79381443298969
+            },
+            "usableStorage": {
+              "raw": 850,
+              "normalised": 0.4594594594594595,
+              "weighted": 4.594594594594595
+            }
+          },
+          "derived": {
+            "memoryHeadroomGb": 36,
+            "modelClass": "32B",
+            "usableStorageGb": 850,
+            "gbpPer1000MultiCore": 99.95,
+            "gbpPerGbRam": 41.645833333333336,
+            "gbpPerGbUsableStorage": 2.3517647058823528
+          },
+          "isParetoOptimal": false,
+          "isTop10": true,
+          "summary": "Mac mini M4 Pro 12/16-core 48GB 1TB (new) is £1,999, scores 20,000 multi-core, runs models up to 32B, and stores 850 GB usable."
+        },
+        {
+          "listingId": "00000000000000a9",
+          "rank": 4,
+          "capabilityScore": 56.464958063771306,
+          "valueScore": 26.900885213802432,
+          "components": {
+            "multiCore": {
+              "raw": 20000,
+              "normalised": 0.7763975155279503,
+              "weighted": 23.29192546583851
+            },
+            "memoryHeadroom": {
+              "raw": 36,
+              "normalised": 0.3103448275862069,
+              "weighted": 10.862068965517242
+            },
+            "gpuAndBandwidth": {
+              "raw": 0.5281703069887508,
+              "normalised": 0.5281703069887508,
+              "weighted": 7.922554604831261
+            },
+            "singleCore": {
+              "raw": 3800,
+              "normalised": 0.979381443298969,
+              "weighted": 9.79381443298969
+            },
+            "usableStorage": {
+              "raw": 850,
+              "normalised": 0.4594594594594595,
+              "weighted": 4.594594594594595
+            }
+          },
+          "derived": {
+            "memoryHeadroomGb": 36,
+            "modelClass": "32B",
+            "usableStorageGb": 850,
+            "gbpPer1000MultiCore": 104.95,
+            "gbpPerGbRam": 43.729166666666664,
+            "gbpPerGbUsableStorage": 2.469411764705882
+          },
+          "isParetoOptimal": false,
+          "isTop10": true,
+          "summary": "Mac mini M4 Pro 12/16-core 48GB 1TB (third-party refurbished) is £2,099, scores 20,000 multi-core, runs models up to 32B, and stores 850 GB usable."
+        },
+        {
+          "listingId": "00000000000000a6",
+          "rank": 5,
+          "capabilityScore": 100,
+          "valueScore": 19.232618521011638,
+          "components": {
+            "multiCore": {
+              "raw": 25760,
+              "normalised": 1,
+              "weighted": 30
+            },
+            "memoryHeadroom": {
+              "raw": 116,
+              "normalised": 1,
+              "weighted": 35
+            },
+            "gpuAndBandwidth": {
+              "raw": 1,
+              "normalised": 1,
+              "weighted": 15
+            },
+            "singleCore": {
+              "raw": 3880,
+              "normalised": 1,
+              "weighted": 10
+            },
+            "usableStorage": {
+              "raw": 1850,
+              "normalised": 1,
+              "weighted": 10
+            }
+          },
+          "derived": {
+            "memoryHeadroomGb": 116,
+            "modelClass": "120B+",
+            "usableStorageGb": 1850,
+            "gbpPer1000MultiCore": 201.8439440993789,
+            "gbpPerGbRam": 40.62109375,
+            "gbpPerGbUsableStorage": 2.8105405405405404
+          },
+          "isParetoOptimal": true,
+          "isTop10": true,
+          "summary": "MacBook Pro 16-inch M4 Max 16/40-core 128GB 2TB (new) is £5,199.50, scores 25,760 multi-core, runs models up to 120B+, and stores 1,850 GB usable."
+        }
+      ],
+      "top10": [
+        "00000000000000a3",
+        "00000000000000a2",
+        "00000000000000a1",
+        "00000000000000a9",
+        "00000000000000a6"
+      ],
+      "paretoFrontier": [
+        "00000000000000a3",
+        "00000000000000a2",
+        "00000000000000a6"
+      ],
+      "priceBandPicks": [
+        {
+          "bandId": "under-1000",
+          "label": "Under £1,000",
+          "minGbp": 0,
+          "maxGbp": 1000,
+          "listingId": "00000000000000a3"
+        },
+        {
+          "bandId": "1000-2000",
+          "label": "£1,000–£2,000",
+          "minGbp": 1000,
+          "maxGbp": 2000,
+          "listingId": "00000000000000a2"
+        },
+        {
+          "bandId": "2000-3500",
+          "label": "£2,000–£3,500",
+          "minGbp": 2000,
+          "maxGbp": 3500,
+          "listingId": "00000000000000a9"
+        },
+        {
+          "bandId": "over-3500",
+          "label": "Over £3,500",
+          "minGbp": 3500,
+          "maxGbp": null,
+          "listingId": "00000000000000a6"
+        }
+      ],
+      "exclusions": [
+        {
+          "listingId": "00000000000000a4",
+          "reason": "below-ram-floor",
+          "detail": "8 GB RAM is below the 16 GB floor."
+        },
+        {
+          "listingId": "00000000000000a5",
+          "reason": "below-ssd-floor",
+          "detail": "256GB SSD is below the 512GB floor."
+        },
+        {
+          "listingId": "00000000000000a7",
+          "reason": "missing-benchmark",
+          "detail": "No verified Geekbench Metal score for m5-ultra-30c-64g."
+        },
+        {
+          "listingId": "00000000000000a8",
+          "reason": "missing-memory-bandwidth",
+          "detail": "No verified memory bandwidth figure for m6-10c-10g."
+        }
+      ],
+      "storageSensitivity": {
+        "externalStorage": {
+          "product": "Example 2TB Thunderbolt SSD",
+          "capacityGb": 2000,
+          "priceGbp": 300,
+          "sourceUrl": "https://example.com/ssd",
+          "retrievedDate": "2026-01-05"
+        },
+        "entries": [
+          {
+            "listingId": "00000000000000a3",
+            "baselineRank": 1,
+            "rank": 1,
+            "adjusted": true,
+            "priceGbp": 1099,
+            "usableStorageGb": 2362,
+            "capabilityScore": 40.58326696919235,
+            "valueScore": 36.9274494715126
+          },
+          {
+            "listingId": "00000000000000a2",
+            "baselineRank": 2,
+            "rank": 2,
+            "adjusted": true,
+            "priceGbp": 1999,
+            "usableStorageGb": 2850,
+            "capabilityScore": 61.87036346917671,
+            "valueScore": 30.950657063119916
+          },
+          {
+            "listingId": "00000000000000a1",
+            "baselineRank": 3,
+            "rank": 3,
+            "adjusted": true,
+            "priceGbp": 2299,
+            "usableStorageGb": 2850,
+            "capabilityScore": 61.87036346917671,
+            "valueScore": 26.911858838267378
+          },
+          {
+            "listingId": "00000000000000a9",
+            "baselineRank": 4,
+            "rank": 4,
+            "adjusted": true,
+            "priceGbp": 2399,
+            "usableStorageGb": 2850,
+            "capabilityScore": 61.87036346917671,
+            "valueScore": 25.790063972145354
+          },
+          {
+            "listingId": "00000000000000a6",
+            "baselineRank": 5,
+            "rank": 5,
+            "adjusted": false,
+            "priceGbp": 5199.5,
+            "usableStorageGb": 1850,
+            "capabilityScore": 96.49122807017544,
+            "valueScore": 18.557789800976142
+          }
+        ],
+        "top10": [
+          "00000000000000a3",
+          "00000000000000a2",
+          "00000000000000a1",
+          "00000000000000a9",
+          "00000000000000a6"
+        ],
+        "winnerChanged": false,
+        "summary": "Adding a 2TB external SSD (£300) to every desktop does not change the best option, Mac mini M4 10/10-core 16GB 512GB."
+      },
+      "conclusion": {
+        "winnerListingId": "00000000000000a3",
+        "text": "Mac mini M4 10/10-core 16GB 512GB (new) at £799 from Apple UK is the best value for the \"Secondary development machine with local LLMs\" profile, with a value score of 42.87 and a capability score of 34.3 out of 100. It scores 14,978 multi-core, runs only models below 7B and keeps 362 GB of usable storage. It is in the top 10 under all 3 profiles."
+      }
+    },
+    {
+      "profile": {
+        "schemaVersion": 1,
+        "id": "cpu-heavy",
+        "name": "CPU-heavy",
+        "description": "Docker, Xcode and several local LLMs.",
+        "isDefault": false,
+        "weights": {
+          "multiCore": 50,
+          "memoryHeadroom": 15,
+          "gpuAndBandwidth": 5,
+          "singleCore": 20,
+          "usableStorage": 10
+        },
+        "gpuAndBandwidthSplit": {
+          "metal": 50,
+          "memoryBandwidth": 50
+        },
+        "reservations": {
+          "memoryGb": 12,
+          "storageGb": 150,
+          "assumption": "macOS, Docker and Xcode."
+        },
+        "floors": {
+          "minRamGb": 16,
+          "minSsdGb": 512
+        },
+        "belowSmallestClassLabel": "below 7B",
+        "modelClasses": [
+          {
+            "label": "7B",
+            "minHeadroomGb": 6,
+            "assumption": "About 5 GB at 4-bit."
+          },
+          {
+            "label": "14B",
+            "minHeadroomGb": 11,
+            "assumption": "About 10 GB at 4-bit."
+          },
+          {
+            "label": "32B",
+            "minHeadroomGb": 22,
+            "assumption": "About 20 GB at 4-bit."
+          },
+          {
+            "label": "70B",
+            "minHeadroomGb": 45,
+            "assumption": "About 42 GB at 4-bit."
+          },
+          {
+            "label": "120B+",
+            "minHeadroomGb": 75,
+            "assumption": "About 72 GB at 4-bit."
+          }
+        ],
+        "priceBands": [
+          {
+            "id": "under-1000",
+            "label": "Under £1,000",
+            "minGbp": 0,
+            "maxGbp": 1000
+          },
+          {
+            "id": "1000-2000",
+            "label": "£1,000–£2,000",
+            "minGbp": 1000,
+            "maxGbp": 2000
+          },
+          {
+            "id": "2000-3500",
+            "label": "£2,000–£3,500",
+            "minGbp": 2000,
+            "maxGbp": 3500
+          },
+          {
+            "id": "over-3500",
+            "label": "Over £3,500",
+            "minGbp": 3500,
+            "maxGbp": null
+          }
+        ],
+        "externalStorage": {
+          "product": "Example 2TB Thunderbolt SSD",
+          "capacityGb": 2000,
+          "priceGbp": 300,
+          "sourceUrl": "https://example.com/ssd",
+          "retrievedDate": "2026-01-05"
+        }
+      },
+      "ranking": [
+        {
+          "listingId": "00000000000000a3",
+          "rank": 1,
+          "capabilityScore": 52.190006642372175,
+          "valueScore": 65.31915724952712,
+          "components": {
+            "multiCore": {
+              "raw": 14978,
+              "normalised": 0.581444099378882,
+              "weighted": 29.0722049689441
+            },
+            "memoryHeadroom": {
+              "raw": 4,
+              "normalised": 0.034482758620689655,
+              "weighted": 0.5172413793103449
+            },
+            "gpuAndBandwidth": {
+              "raw": 0.2658741095340519,
+              "normalised": 0.2658741095340519,
+              "weighted": 1.3293705476702593
+            },
+            "singleCore": {
+              "raw": 3747,
+              "normalised": 0.9657216494845361,
+              "weighted": 19.314432989690722
+            },
+            "usableStorage": {
+              "raw": 362,
+              "normalised": 0.19567567567567568,
+              "weighted": 1.9567567567567568
+            }
+          },
+          "derived": {
+            "memoryHeadroomGb": 4,
+            "modelClass": "below 7B",
+            "usableStorageGb": 362,
+            "gbpPer1000MultiCore": 53.34490586193083,
+            "gbpPerGbRam": 49.9375,
+            "gbpPerGbUsableStorage": 2.207182320441989
+          },
+          "isParetoOptimal": true,
+          "isTop10": true,
+          "summary": "Mac mini M4 10/10-core 16GB 512GB (new) is £799, scores 14,978 multi-core, runs only models below 7B, and stores 362 GB usable."
+        },
+        {
+          "listingId": "00000000000000a2",
+          "rank": 2,
+          "capabilityScore": 70.29812318570835,
+          "valueScore": 41.37617609517854,
+          "components": {
+            "multiCore": {
+              "raw": 20000,
+              "normalised": 0.7763975155279503,
+              "weighted": 38.81987577639752
+            },
+            "memoryHeadroom": {
+              "raw": 36,
+              "normalised": 0.3103448275862069,
+              "weighted": 4.655172413793103
+            },
+            "gpuAndBandwidth": {
+              "raw": 0.5281703069887508,
+              "normalised": 0.5281703069887508,
+              "weighted": 2.640851534943754
+            },
+            "singleCore": {
+              "raw": 3800,
+              "normalised": 0.979381443298969,
+              "weighted": 19.58762886597938
+            },
+            "usableStorage": {
+              "raw": 850,
+              "normalised": 0.4594594594594595,
+              "weighted": 4.594594594594595
+            }
+          },
+          "derived": {
+            "memoryHeadroomGb": 36,
+            "modelClass": "32B",
+            "usableStorageGb": 850,
+            "gbpPer1000MultiCore": 84.95,
+            "gbpPerGbRam": 35.395833333333336,
+            "gbpPerGbUsableStorage": 1.9988235294117647
+          },
+          "isParetoOptimal": true,
+          "isTop10": true,
+          "summary": "Mac mini M4 Pro 12/16-core 48GB 1TB (Apple refurbished) is £1,699, scores 20,000 multi-core, runs models up to 32B, and stores 850 GB usable."
+        },
+        {
+          "listingId": "00000000000000a1",
+          "rank": 3,
+          "capabilityScore": 70.29812318570835,
+          "valueScore": 35.16664491531183,
+          "components": {
+            "multiCore": {
+              "raw": 20000,
+              "normalised": 0.7763975155279503,
+              "weighted": 38.81987577639752
+            },
+            "memoryHeadroom": {
+              "raw": 36,
+              "normalised": 0.3103448275862069,
+              "weighted": 4.655172413793103
+            },
+            "gpuAndBandwidth": {
+              "raw": 0.5281703069887508,
+              "normalised": 0.5281703069887508,
+              "weighted": 2.640851534943754
+            },
+            "singleCore": {
+              "raw": 3800,
+              "normalised": 0.979381443298969,
+              "weighted": 19.58762886597938
+            },
+            "usableStorage": {
+              "raw": 850,
+              "normalised": 0.4594594594594595,
+              "weighted": 4.594594594594595
+            }
+          },
+          "derived": {
+            "memoryHeadroomGb": 36,
+            "modelClass": "32B",
+            "usableStorageGb": 850,
+            "gbpPer1000MultiCore": 99.95,
+            "gbpPerGbRam": 41.645833333333336,
+            "gbpPerGbUsableStorage": 2.3517647058823528
+          },
+          "isParetoOptimal": false,
+          "isTop10": true,
+          "summary": "Mac mini M4 Pro 12/16-core 48GB 1TB (new) is £1,999, scores 20,000 multi-core, runs models up to 32B, and stores 850 GB usable."
+        },
+        {
+          "listingId": "00000000000000a9",
+          "rank": 4,
+          "capabilityScore": 70.29812318570835,
+          "valueScore": 33.491244966988255,
+          "components": {
+            "multiCore": {
+              "raw": 20000,
+              "normalised": 0.7763975155279503,
+              "weighted": 38.81987577639752
+            },
+            "memoryHeadroom": {
+              "raw": 36,
+              "normalised": 0.3103448275862069,
+              "weighted": 4.655172413793103
+            },
+            "gpuAndBandwidth": {
+              "raw": 0.5281703069887508,
+              "normalised": 0.5281703069887508,
+              "weighted": 2.640851534943754
+            },
+            "singleCore": {
+              "raw": 3800,
+              "normalised": 0.979381443298969,
+              "weighted": 19.58762886597938
+            },
+            "usableStorage": {
+              "raw": 850,
+              "normalised": 0.4594594594594595,
+              "weighted": 4.594594594594595
+            }
+          },
+          "derived": {
+            "memoryHeadroomGb": 36,
+            "modelClass": "32B",
+            "usableStorageGb": 850,
+            "gbpPer1000MultiCore": 104.95,
+            "gbpPerGbRam": 43.729166666666664,
+            "gbpPerGbUsableStorage": 2.469411764705882
+          },
+          "isParetoOptimal": false,
+          "isTop10": true,
+          "summary": "Mac mini M4 Pro 12/16-core 48GB 1TB (third-party refurbished) is £2,099, scores 20,000 multi-core, runs models up to 32B, and stores 850 GB usable."
+        },
+        {
+          "listingId": "00000000000000a6",
+          "rank": 5,
+          "capabilityScore": 100,
+          "valueScore": 19.232618521011638,
+          "components": {
+            "multiCore": {
+              "raw": 25760,
+              "normalised": 1,
+              "weighted": 50
+            },
+            "memoryHeadroom": {
+              "raw": 116,
+              "normalised": 1,
+              "weighted": 15
+            },
+            "gpuAndBandwidth": {
+              "raw": 1,
+              "normalised": 1,
+              "weighted": 5
+            },
+            "singleCore": {
+              "raw": 3880,
+              "normalised": 1,
+              "weighted": 20
+            },
+            "usableStorage": {
+              "raw": 1850,
+              "normalised": 1,
+              "weighted": 10
+            }
+          },
+          "derived": {
+            "memoryHeadroomGb": 116,
+            "modelClass": "120B+",
+            "usableStorageGb": 1850,
+            "gbpPer1000MultiCore": 201.8439440993789,
+            "gbpPerGbRam": 40.62109375,
+            "gbpPerGbUsableStorage": 2.8105405405405404
+          },
+          "isParetoOptimal": true,
+          "isTop10": true,
+          "summary": "MacBook Pro 16-inch M4 Max 16/40-core 128GB 2TB (new) is £5,199.50, scores 25,760 multi-core, runs models up to 120B+, and stores 1,850 GB usable."
+        }
+      ],
+      "top10": [
+        "00000000000000a3",
+        "00000000000000a2",
+        "00000000000000a1",
+        "00000000000000a9",
+        "00000000000000a6"
+      ],
+      "paretoFrontier": [
+        "00000000000000a3",
+        "00000000000000a2",
+        "00000000000000a6"
+      ],
+      "priceBandPicks": [
+        {
+          "bandId": "under-1000",
+          "label": "Under £1,000",
+          "minGbp": 0,
+          "maxGbp": 1000,
+          "listingId": "00000000000000a3"
+        },
+        {
+          "bandId": "1000-2000",
+          "label": "£1,000–£2,000",
+          "minGbp": 1000,
+          "maxGbp": 2000,
+          "listingId": "00000000000000a2"
+        },
+        {
+          "bandId": "2000-3500",
+          "label": "£2,000–£3,500",
+          "minGbp": 2000,
+          "maxGbp": 3500,
+          "listingId": "00000000000000a9"
+        },
+        {
+          "bandId": "over-3500",
+          "label": "Over £3,500",
+          "minGbp": 3500,
+          "maxGbp": null,
+          "listingId": "00000000000000a6"
+        }
+      ],
+      "exclusions": [
+        {
+          "listingId": "00000000000000a4",
+          "reason": "below-ram-floor",
+          "detail": "8 GB RAM is below the 16 GB floor."
+        },
+        {
+          "listingId": "00000000000000a5",
+          "reason": "below-ssd-floor",
+          "detail": "256GB SSD is below the 512GB floor."
+        },
+        {
+          "listingId": "00000000000000a7",
+          "reason": "missing-benchmark",
+          "detail": "No verified Geekbench Metal score for m5-ultra-30c-64g."
+        },
+        {
+          "listingId": "00000000000000a8",
+          "reason": "missing-memory-bandwidth",
+          "detail": "No verified memory bandwidth figure for m6-10c-10g."
+        }
+      ],
+      "storageSensitivity": {
+        "externalStorage": {
+          "product": "Example 2TB Thunderbolt SSD",
+          "capacityGb": 2000,
+          "priceGbp": 300,
+          "sourceUrl": "https://example.com/ssd",
+          "retrievedDate": "2026-01-05"
+        },
+        "entries": [
+          {
+            "listingId": "00000000000000a3",
+            "baselineRank": 1,
+            "rank": 1,
+            "adjusted": true,
+            "priceGbp": 1099,
+            "usableStorageGb": 2362,
+            "capabilityScore": 58.520969183861034,
+            "valueScore": 53.24928952125663
+          },
+          {
+            "listingId": "00000000000000a2",
+            "baselineRank": 2,
+            "rank": 2,
+            "adjusted": true,
+            "priceGbp": 1999,
+            "usableStorageGb": 2850,
+            "capabilityScore": 75.70352859111375,
+            "valueScore": 37.87069964537956
+          },
+          {
+            "listingId": "00000000000000a1",
+            "baselineRank": 3,
+            "rank": 3,
+            "adjusted": true,
+            "priceGbp": 2299,
+            "usableStorageGb": 2850,
+            "capabilityScore": 75.70352859111375,
+            "valueScore": 32.92889455898815
+          },
+          {
+            "listingId": "00000000000000a9",
+            "baselineRank": 4,
+            "rank": 4,
+            "adjusted": true,
+            "priceGbp": 2399,
+            "usableStorageGb": 2850,
+            "capabilityScore": 75.70352859111375,
+            "valueScore": 31.55628536519956
+          },
+          {
+            "listingId": "00000000000000a6",
+            "baselineRank": 5,
+            "rank": 5,
+            "adjusted": false,
+            "priceGbp": 5199.5,
+            "usableStorageGb": 1850,
+            "capabilityScore": 96.49122807017544,
+            "valueScore": 18.557789800976142
+          }
+        ],
+        "top10": [
+          "00000000000000a3",
+          "00000000000000a2",
+          "00000000000000a1",
+          "00000000000000a9",
+          "00000000000000a6"
+        ],
+        "winnerChanged": false,
+        "summary": "Adding a 2TB external SSD (£300) to every desktop does not change the best option, Mac mini M4 10/10-core 16GB 512GB."
+      },
+      "conclusion": {
+        "winnerListingId": "00000000000000a3",
+        "text": "Mac mini M4 10/10-core 16GB 512GB (new) at £799 from Apple UK is the best value for the \"CPU-heavy\" profile, with a value score of 65.32 and a capability score of 52.2 out of 100. It scores 14,978 multi-core, runs only models below 7B and keeps 362 GB of usable storage. It is in the top 10 under all 3 profiles."
+      }
+    },
+    {
+      "profile": {
+        "schemaVersion": 1,
+        "id": "memory-heavy",
+        "name": "Memory-heavy",
+        "description": "Docker, Xcode and several local LLMs.",
+        "isDefault": false,
+        "weights": {
+          "multiCore": 15,
+          "memoryHeadroom": 55,
+          "gpuAndBandwidth": 15,
+          "singleCore": 5,
+          "usableStorage": 10
+        },
+        "gpuAndBandwidthSplit": {
+          "metal": 50,
+          "memoryBandwidth": 50
+        },
+        "reservations": {
+          "memoryGb": 12,
+          "storageGb": 150,
+          "assumption": "macOS, Docker and Xcode."
+        },
+        "floors": {
+          "minRamGb": 16,
+          "minSsdGb": 512
+        },
+        "belowSmallestClassLabel": "below 7B",
+        "modelClasses": [
+          {
+            "label": "7B",
+            "minHeadroomGb": 6,
+            "assumption": "About 5 GB at 4-bit."
+          },
+          {
+            "label": "14B",
+            "minHeadroomGb": 11,
+            "assumption": "About 10 GB at 4-bit."
+          },
+          {
+            "label": "32B",
+            "minHeadroomGb": 22,
+            "assumption": "About 20 GB at 4-bit."
+          },
+          {
+            "label": "70B",
+            "minHeadroomGb": 45,
+            "assumption": "About 42 GB at 4-bit."
+          },
+          {
+            "label": "120B+",
+            "minHeadroomGb": 75,
+            "assumption": "About 72 GB at 4-bit."
+          }
+        ],
+        "priceBands": [
+          {
+            "id": "under-1000",
+            "label": "Under £1,000",
+            "minGbp": 0,
+            "maxGbp": 1000
+          },
+          {
+            "id": "1000-2000",
+            "label": "£1,000–£2,000",
+            "minGbp": 1000,
+            "maxGbp": 2000
+          },
+          {
+            "id": "2000-3500",
+            "label": "£2,000–£3,500",
+            "minGbp": 2000,
+            "maxGbp": 3500
+          },
+          {
+            "id": "over-3500",
+            "label": "Over £3,500",
+            "minGbp": 3500,
+            "maxGbp": null
+          }
+        ],
+        "externalStorage": {
+          "product": "Example 2TB Thunderbolt SSD",
+          "capacityGb": 2000,
+          "priceGbp": 300,
+          "sourceUrl": "https://example.com/ssd",
+          "retrievedDate": "2026-01-05"
+        }
+      },
+      "ranking": [
+        {
+          "listingId": "00000000000000a2",
+          "rank": 1,
+          "capabilityScore": 46.12898466608134,
+          "valueScore": 27.150667843485188,
+          "components": {
+            "multiCore": {
+              "raw": 20000,
+              "normalised": 0.7763975155279503,
+              "weighted": 11.645962732919255
+            },
+            "memoryHeadroom": {
+              "raw": 36,
+              "normalised": 0.3103448275862069,
+              "weighted": 17.06896551724138
+            },
+            "gpuAndBandwidth": {
+              "raw": 0.5281703069887508,
+              "normalised": 0.5281703069887508,
+              "weighted": 7.922554604831261
+            },
+            "singleCore": {
+              "raw": 3800,
+              "normalised": 0.979381443298969,
+              "weighted": 4.896907216494845
+            },
+            "usableStorage": {
+              "raw": 850,
+              "normalised": 0.4594594594594595,
+              "weighted": 4.594594594594595
+            }
+          },
+          "derived": {
+            "memoryHeadroomGb": 36,
+            "modelClass": "32B",
+            "usableStorageGb": 850,
+            "gbpPer1000MultiCore": 84.95,
+            "gbpPerGbRam": 35.395833333333336,
+            "gbpPerGbUsableStorage": 1.9988235294117647
+          },
+          "isParetoOptimal": true,
+          "isTop10": true,
+          "summary": "Mac mini M4 Pro 12/16-core 48GB 1TB (Apple refurbished) is £1,699, scores 20,000 multi-core, runs models up to 32B, and stores 850 GB usable."
+        },
+        {
+          "listingId": "00000000000000a3",
+          "rank": 2,
+          "capabilityScore": 21.39168986201138,
+          "valueScore": 26.773078675859047,
+          "components": {
+            "multiCore": {
+              "raw": 14978,
+              "normalised": 0.581444099378882,
+              "weighted": 8.72166149068323
+            },
+            "memoryHeadroom": {
+              "raw": 4,
+              "normalised": 0.034482758620689655,
+              "weighted": 1.896551724137931
+            },
+            "gpuAndBandwidth": {
+              "raw": 0.2658741095340519,
+              "normalised": 0.2658741095340519,
+              "weighted": 3.9881116430107784
+            },
+            "singleCore": {
+              "raw": 3747,
+              "normalised": 0.9657216494845361,
+              "weighted": 4.828608247422681
+            },
+            "usableStorage": {
+              "raw": 362,
+              "normalised": 0.19567567567567568,
+              "weighted": 1.9567567567567568
+            }
+          },
+          "derived": {
+            "memoryHeadroomGb": 4,
+            "modelClass": "below 7B",
+            "usableStorageGb": 362,
+            "gbpPer1000MultiCore": 53.34490586193083,
+            "gbpPerGbRam": 49.9375,
+            "gbpPerGbUsableStorage": 2.207182320441989
+          },
+          "isParetoOptimal": true,
+          "isTop10": true,
+          "summary": "Mac mini M4 10/10-core 16GB 512GB (new) is £799, scores 14,978 multi-core, runs only models below 7B, and stores 362 GB usable."
+        },
+        {
+          "listingId": "00000000000000a1",
+          "rank": 3,
+          "capabilityScore": 46.12898466608134,
+          "valueScore": 23.07603034821478,
+          "components": {
+            "multiCore": {
+              "raw": 20000,
+              "normalised": 0.7763975155279503,
+              "weighted": 11.645962732919255
+            },
+            "memoryHeadroom": {
+              "raw": 36,
+              "normalised": 0.3103448275862069,
+              "weighted": 17.06896551724138
+            },
+            "gpuAndBandwidth": {
+              "raw": 0.5281703069887508,
+              "normalised": 0.5281703069887508,
+              "weighted": 7.922554604831261
+            },
+            "singleCore": {
+              "raw": 3800,
+              "normalised": 0.979381443298969,
+              "weighted": 4.896907216494845
+            },
+            "usableStorage": {
+              "raw": 850,
+              "normalised": 0.4594594594594595,
+              "weighted": 4.594594594594595
+            }
+          },
+          "derived": {
+            "memoryHeadroomGb": 36,
+            "modelClass": "32B",
+            "usableStorageGb": 850,
+            "gbpPer1000MultiCore": 99.95,
+            "gbpPerGbRam": 41.645833333333336,
+            "gbpPerGbUsableStorage": 2.3517647058823528
+          },
+          "isParetoOptimal": false,
+          "isTop10": true,
+          "summary": "Mac mini M4 Pro 12/16-core 48GB 1TB (new) is £1,999, scores 20,000 multi-core, runs models up to 32B, and stores 850 GB usable."
+        },
+        {
+          "listingId": "00000000000000a9",
+          "rank": 4,
+          "capabilityScore": 46.12898466608134,
+          "valueScore": 21.976648244917264,
+          "components": {
+            "multiCore": {
+              "raw": 20000,
+              "normalised": 0.7763975155279503,
+              "weighted": 11.645962732919255
+            },
+            "memoryHeadroom": {
+              "raw": 36,
+              "normalised": 0.3103448275862069,
+              "weighted": 17.06896551724138
+            },
+            "gpuAndBandwidth": {
+              "raw": 0.5281703069887508,
+              "normalised": 0.5281703069887508,
+              "weighted": 7.922554604831261
+            },
+            "singleCore": {
+              "raw": 3800,
+              "normalised": 0.979381443298969,
+              "weighted": 4.896907216494845
+            },
+            "usableStorage": {
+              "raw": 850,
+              "normalised": 0.4594594594594595,
+              "weighted": 4.594594594594595
+            }
+          },
+          "derived": {
+            "memoryHeadroomGb": 36,
+            "modelClass": "32B",
+            "usableStorageGb": 850,
+            "gbpPer1000MultiCore": 104.95,
+            "gbpPerGbRam": 43.729166666666664,
+            "gbpPerGbUsableStorage": 2.469411764705882
+          },
+          "isParetoOptimal": false,
+          "isTop10": true,
+          "summary": "Mac mini M4 Pro 12/16-core 48GB 1TB (third-party refurbished) is £2,099, scores 20,000 multi-core, runs models up to 32B, and stores 850 GB usable."
+        },
+        {
+          "listingId": "00000000000000a6",
+          "rank": 5,
+          "capabilityScore": 100,
+          "valueScore": 19.232618521011638,
+          "components": {
+            "multiCore": {
+              "raw": 25760,
+              "normalised": 1,
+              "weighted": 15
+            },
+            "memoryHeadroom": {
+              "raw": 116,
+              "normalised": 1,
+              "weighted": 55
+            },
+            "gpuAndBandwidth": {
+              "raw": 1,
+              "normalised": 1,
+              "weighted": 15
+            },
+            "singleCore": {
+              "raw": 3880,
+              "normalised": 1,
+              "weighted": 5
+            },
+            "usableStorage": {
+              "raw": 1850,
+              "normalised": 1,
+              "weighted": 10
+            }
+          },
+          "derived": {
+            "memoryHeadroomGb": 116,
+            "modelClass": "120B+",
+            "usableStorageGb": 1850,
+            "gbpPer1000MultiCore": 201.8439440993789,
+            "gbpPerGbRam": 40.62109375,
+            "gbpPerGbUsableStorage": 2.8105405405405404
+          },
+          "isParetoOptimal": true,
+          "isTop10": true,
+          "summary": "MacBook Pro 16-inch M4 Max 16/40-core 128GB 2TB (new) is £5,199.50, scores 25,760 multi-core, runs models up to 120B+, and stores 1,850 GB usable."
+        }
+      ],
+      "top10": [
+        "00000000000000a2",
+        "00000000000000a3",
+        "00000000000000a1",
+        "00000000000000a9",
+        "00000000000000a6"
+      ],
+      "paretoFrontier": [
+        "00000000000000a2",
+        "00000000000000a3",
+        "00000000000000a6"
+      ],
+      "priceBandPicks": [
+        {
+          "bandId": "under-1000",
+          "label": "Under £1,000",
+          "minGbp": 0,
+          "maxGbp": 1000,
+          "listingId": "00000000000000a3"
+        },
+        {
+          "bandId": "1000-2000",
+          "label": "£1,000–£2,000",
+          "minGbp": 1000,
+          "maxGbp": 2000,
+          "listingId": "00000000000000a2"
+        },
+        {
+          "bandId": "2000-3500",
+          "label": "£2,000–£3,500",
+          "minGbp": 2000,
+          "maxGbp": 3500,
+          "listingId": "00000000000000a9"
+        },
+        {
+          "bandId": "over-3500",
+          "label": "Over £3,500",
+          "minGbp": 3500,
+          "maxGbp": null,
+          "listingId": "00000000000000a6"
+        }
+      ],
+      "exclusions": [
+        {
+          "listingId": "00000000000000a4",
+          "reason": "below-ram-floor",
+          "detail": "8 GB RAM is below the 16 GB floor."
+        },
+        {
+          "listingId": "00000000000000a5",
+          "reason": "below-ssd-floor",
+          "detail": "256GB SSD is below the 512GB floor."
+        },
+        {
+          "listingId": "00000000000000a7",
+          "reason": "missing-benchmark",
+          "detail": "No verified Geekbench Metal score for m5-ultra-30c-64g."
+        },
+        {
+          "listingId": "00000000000000a8",
+          "reason": "missing-memory-bandwidth",
+          "detail": "No verified memory bandwidth figure for m6-10c-10g."
+        }
+      ],
+      "storageSensitivity": {
+        "externalStorage": {
+          "product": "Example 2TB Thunderbolt SSD",
+          "capacityGb": 2000,
+          "priceGbp": 300,
+          "sourceUrl": "https://example.com/ssd",
+          "retrievedDate": "2026-01-05"
+        },
+        "entries": [
+          {
+            "listingId": "00000000000000a2",
+            "baselineRank": 1,
+            "rank": 1,
+            "adjusted": true,
+            "priceGbp": 1999,
+            "usableStorageGb": 2850,
+            "capabilityScore": 51.53439007148674,
+            "valueScore": 25.78008507828251
+          },
+          {
+            "listingId": "00000000000000a3",
+            "baselineRank": 2,
+            "rank": 2,
+            "adjusted": true,
+            "priceGbp": 1099,
+            "usableStorageGb": 2362,
+            "capabilityScore": 27.722652403500234,
+            "valueScore": 25.225343406278647
+          },
+          {
+            "listingId": "00000000000000a1",
+            "baselineRank": 3,
+            "rank": 3,
+            "adjusted": true,
+            "priceGbp": 2299,
+            "usableStorageGb": 2850,
+            "capabilityScore": 51.53439007148674,
+            "valueScore": 22.416002640925072
+          },
+          {
+            "listingId": "00000000000000a9",
+            "baselineRank": 4,
+            "rank": 4,
+            "adjusted": true,
+            "priceGbp": 2399,
+            "usableStorageGb": 2850,
+            "capabilityScore": 51.53439007148674,
+            "valueScore": 21.481613201953625
+          },
+          {
+            "listingId": "00000000000000a6",
+            "baselineRank": 5,
+            "rank": 5,
+            "adjusted": false,
+            "priceGbp": 5199.5,
+            "usableStorageGb": 1850,
+            "capabilityScore": 96.49122807017544,
+            "valueScore": 18.557789800976142
+          }
+        ],
+        "top10": [
+          "00000000000000a2",
+          "00000000000000a3",
+          "00000000000000a1",
+          "00000000000000a9",
+          "00000000000000a6"
+        ],
+        "winnerChanged": false,
+        "summary": "Adding a 2TB external SSD (£300) to every desktop does not change the best option, Mac mini M4 Pro 12/16-core 48GB 1TB."
+      },
+      "conclusion": {
+        "winnerListingId": "00000000000000a2",
+        "text": "Mac mini M4 Pro 12/16-core 48GB 1TB (Apple refurbished) at £1,699 from Apple UK is the best value for the \"Memory-heavy\" profile, with a value score of 27.15 and a capability score of 46.1 out of 100. It scores 20,000 multi-core, runs models up to 32B and keeps 850 GB of usable storage. It is in the top 10 under all 3 profiles."
+      }
+    }
+  ],
+  "stability": {
+    "profileIds": [
+      "secondary-dev-llm",
+      "cpu-heavy",
+      "memory-heavy"
+    ],
+    "stableListingIds": [
+      "00000000000000a1",
+      "00000000000000a2",
+      "00000000000000a3",
+      "00000000000000a6",
+      "00000000000000a9"
+    ],
+    "summary": "5 listings are in the top 10 under all 3 profiles."
+  },
+  "newVersusRefurbished": [
+    {
+      "model": "Mac mini",
+      "chipId": "m4-pro-12c-16g",
+      "chipLabel": "M4 Pro (12-core CPU, 16-core GPU)",
+      "ramGb": 48,
+      "ssdGb": 1000,
+      "newListingId": "00000000000000a1",
+      "newPriceGbp": 1999,
+      "alternatives": [
+        {
+          "listingId": "00000000000000a2",
+          "condition": "apple-refurbished",
+          "seller": "Apple UK",
+          "priceGbp": 1699,
+          "savingGbp": 300,
+          "savingPercent": 15.007503751875939
+        },
+        {
+          "listingId": "00000000000000a9",
+          "condition": "third-party-refurbished",
+          "seller": "Example Refurb",
+          "priceGbp": 2099,
+          "savingGbp": -100,
+          "savingPercent": -5.002501250625312
+        }
+      ]
+    }
+  ],
+  "chips": [
+    {
+      "id": "m4-10c-10g",
+      "family": "M4",
+      "generation": 4,
+      "cpuCores": {
+        "total": 10,
+        "performance": 4,
+        "efficiency": 6
+      },
+      "gpuCores": 10,
+      "geekbench": {
+        "singleCore": 3747,
+        "multiCore": 14978,
+        "metal": 56075
+      },
+      "memoryBandwidthGbPerSec": 120,
+      "maxMemoryGb": 32,
+      "sources": [
+        {
+          "url": "https://example.com/chip",
+          "retrievedDate": "2026-01-05",
+          "note": null
+        }
+      ],
+      "retrievedDate": "2026-01-05",
+      "collectedBy": "manual",
+      "note": null
+    },
+    {
+      "id": "m4-max-16c-40g",
+      "family": "M4 Max",
+      "generation": 4,
+      "cpuCores": {
+        "total": 16,
+        "performance": null,
+        "efficiency": null
+      },
+      "gpuCores": 40,
+      "geekbench": {
+        "singleCore": 3880,
+        "multiCore": 25760,
+        "metal": 179746
+      },
+      "memoryBandwidthGbPerSec": 546,
+      "maxMemoryGb": 128,
+      "sources": [
+        {
+          "url": "https://example.com/chip",
+          "retrievedDate": "2026-01-05",
+          "note": null
+        }
+      ],
+      "retrievedDate": "2026-01-05",
+      "collectedBy": "manual",
+      "note": null
+    },
+    {
+      "id": "m4-pro-12c-16g",
+      "family": "M4 Pro",
+      "generation": 4,
+      "cpuCores": {
+        "total": 12,
+        "performance": 8,
+        "efficiency": 4
+      },
+      "gpuCores": 16,
+      "geekbench": {
+        "singleCore": 3800,
+        "multiCore": 20000,
+        "metal": 100000
+      },
+      "memoryBandwidthGbPerSec": 273,
+      "maxMemoryGb": 64,
+      "sources": [
+        {
+          "url": "https://example.com/chip",
+          "retrievedDate": "2026-01-05",
+          "note": null
+        }
+      ],
+      "retrievedDate": "2026-01-05",
+      "collectedBy": "manual",
+      "note": null
+    },
+    {
+      "id": "m5-ultra-30c-64g",
+      "family": "M5 Ultra",
+      "generation": 5,
+      "cpuCores": {
+        "total": 30,
+        "performance": 30,
+        "efficiency": 0
+      },
+      "gpuCores": 64,
+      "geekbench": {
+        "singleCore": 4318,
+        "multiCore": 37777,
+        "metal": null
+      },
+      "memoryBandwidthGbPerSec": 1200,
+      "maxMemoryGb": null,
+      "sources": [
+        {
+          "url": "https://example.com/chip",
+          "retrievedDate": "2026-01-05",
+          "note": null
+        }
+      ],
+      "retrievedDate": "2026-01-05",
+      "collectedBy": "agent",
+      "note": null
+    },
+    {
+      "id": "m6-10c-10g",
+      "family": "M6",
+      "generation": 6,
+      "cpuCores": {
+        "total": 10,
+        "performance": 5,
+        "efficiency": 5
+      },
+      "gpuCores": 10,
+      "geekbench": {
+        "singleCore": 4561,
+        "multiCore": 18758,
+        "metal": 60000
+      },
+      "memoryBandwidthGbPerSec": null,
+      "maxMemoryGb": 24,
+      "sources": [
+        {
+          "url": "https://example.com/chip",
+          "retrievedDate": "2026-01-05",
+          "note": null
+        }
+      ],
+      "retrievedDate": "2026-01-05",
+      "collectedBy": "manual",
+      "note": null
+    }
+  ],
+  "sources": [
+    {
+      "adapterId": "apple-uk-new",
+      "name": "Apple UK",
+      "kind": "structured",
+      "condition": "new",
+      "url": "https://example.com/store",
+      "status": "ok",
+      "listingCount": 8,
+      "error": null,
+      "retrievedDate": "2026-01-05"
+    },
+    {
+      "adapterId": "example-refurb",
+      "name": "Example Refurb",
+      "kind": "agent",
+      "condition": "third-party-refurbished",
+      "url": "https://example.com/store",
+      "status": "failed",
+      "listingCount": 0,
+      "error": "HTTP 503",
+      "retrievedDate": "2026-01-05"
+    }
+  ]
+}
