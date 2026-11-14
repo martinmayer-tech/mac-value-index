@@ -61,6 +61,24 @@ pnpm check
 `pnpm check` runs lint, the format check, type-checking and the unit tests
 with coverage thresholds.
 
+To run everything CI runs, in the same order and from a clean tree:
+
+```bash
+pnpm ci:local
+```
+
+```bash
+pnpm ci:local --fast
+```
+
+`--fast` skips Lighthouse and the Playwright suite. The first time, install
+the Playwright browser with
+`pnpm --filter web exec playwright install chromium`. The dependency review
+and conventional-commit checks on pull requests are the only CI steps that
+do not run locally; the commit hook covers commit messages.
+
+A pre-push hook runs `pnpm ci:local --fast` before every push.
+
 ### Backend
 
 ```bash

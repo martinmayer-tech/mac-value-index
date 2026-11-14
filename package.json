@@ -15,6 +15,7 @@
     "build": "pnpm build:ts && pnpm --filter web build",
     "build:ts": "tsc --build",
     "check": "pnpm lint && pnpm format:check && pnpm typecheck && pnpm test:coverage",
+    "ci:local": "bash scripts/ci-local.sh",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "pnpm prepare:types && eslint . --max-warnings 0",
