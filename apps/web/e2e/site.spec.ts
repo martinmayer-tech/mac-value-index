@@ -23,6 +23,8 @@ async function shownIds(page: Page): Promise<readonly string[]> {
 }
 
 async function waitForIsland(page: Page): Promise<void> {
+  // The island hydrates when it scrolls into view.
+  await page.locator('.ranking').scrollIntoViewIfNeeded();
   await expect(page.locator('.ranking')).toHaveAttribute(
     'data-hydrated',
     'true',

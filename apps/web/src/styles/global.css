@@ -536,6 +536,13 @@ thead th {
 
 /* Ranking island */
 
+/* The table is long and below the fold: let the browser skip its layout
+   and paint until it is near the viewport. */
+.ranking-table {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 60rem;
+}
+
 .ranking-controls {
   border: 1px solid var(--line);
   border-radius: 0.375rem;

@@ -189,7 +189,9 @@ const description = `Which Apple silicon Mac gives the most development capabili
       Every ranking is calculated in advance. Switching profile shows that
       profile's ranking; filtering and sorting never change a rank.
     </p>
-    <RankingTable client:load data={rankingData} />
+    {/* Hydrate when the table scrolls into view: it is below the fold, and
+        hydrating on load would block the main thread on slower devices. */}
+    <RankingTable client:visible data={rankingData} />
   </section>
 
   <section aria-labelledby="refurb-heading">
