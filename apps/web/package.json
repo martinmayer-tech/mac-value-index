@@ -7,6 +7,7 @@
   "scripts": {
     "build": "astro build",
     "check:html": "html-validate \"dist/**/*.html\"",
+    "check:lighthouse": "lhci autorun",
     "check:links": "node scripts/check-links.mjs dist",
     "dev": "astro dev",
     "preview": "astro preview",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.12",
     "@axe-core/playwright": "^4.14.0",
+    "@lhci/cli": "^0.16.1",
     "@playwright/test": "1.63.0",
     "@types/jsdom": "^30.0.0",
     "html-validate": "^11.21.1"

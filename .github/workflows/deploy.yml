@@ -1,0 +1,88 @@
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Deployments queue; a running deployment is never cancelled.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'push')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      snapshot-date: ${{ steps.snapshot.outputs.date }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || 'main' }}
+      - uses: ./.github/actions/setup
+      - name: Build the Astro site
+        run: pnpm build
+      - name: Read the latest snapshot date
+        id: snapshot
+        run: echo "date=$(node -p "require('./results/index.json').latest")" >> "$GITHUB_OUTPUT"
+      - name: Upload the Pages artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: apps/web/dist/
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      page-url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+
+  smoke-test:
+    name: Smoke test
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PAGE_URL: ${{ needs.deploy.outputs.page-url }}
+      SNAPSHOT_DATE: ${{ needs.build.outputs.snapshot-date }}
+    steps:
+      - name: Home page returns 200 and shows the expected snapshot date
+        run: |
+          for attempt in 1 2 3 4 5 6; do
+            if curl --fail --silent --show-error --location "$PAGE_URL" -o home.html &&
+              grep -q "data-snapshot-date=\"$SNAPSHOT_DATE\"" home.html; then
+              echo "Home page shows snapshot $SNAPSHOT_DATE."
+              exit 0
+            fi
+            echo "Attempt $attempt: not live yet; waiting."
+            sleep 20
+          done
+          echo "::error::Home page did not show snapshot $SNAPSHOT_DATE."
+          exit 1
+      - name: Latest report page loads
+        run: |
+          curl --fail --silent --show-error --location \
+            "${PAGE_URL}reports/${SNAPSHOT_DATE}/" -o report.html
+          grep -q "Mac value index: $SNAPSHOT_DATE" report.html
