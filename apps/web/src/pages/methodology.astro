@@ -1,0 +1,197 @@
+---
+import Base from '../layouts/Base.astro';
+import {formatGbp, formatStorage} from '../lib/format.js';
+import {withBase} from '../lib/paths.js';
+import {defaultProfileResult, getLatestSnapshot} from '../lib/snapshots.js';
+
+const snapshot = await getLatestSnapshot();
+const {results, date} = snapshot.data;
+const {profile} = defaultProfileResult(results);
+const external = profile.externalStorage;
+---
+
+<Base
+  title="Methodology"
+  description="How the Mac value index is calculated: formulas, profiles and weights, reservations, Geekbench version and caveats."
+  path="methodology/"
+>
+  <h1>Methodology</h1>
+  <p>
+    The index answers one question: which Apple silicon Mac gives the most
+    development capability per £ in the UK right now, new or refurbished? Every
+    figure on this site is calculated in advance from the{' '}
+    <a href={withBase('sources/')}>sources</a>. The description below is for the
+    snapshot of {date}.
+  </p>
+
+  <section aria-labelledby="formulas">
+    <h2 id="formulas">Formulas</h2>
+    <ul>
+      <li>
+        <strong>Model memory headroom</strong>: RAM minus{' '}
+        {profile.reservations.memoryGb} GB.
+      </li>
+      <li>
+        <strong>Usable storage</strong>: SSD minus{' '}
+        {profile.reservations.storageGb} GB. 1 TB is counted as 1,000 GB.
+      </li>
+      <li>
+        <strong>Normalisation</strong>: {results.normalisation.description}
+      </li>
+      <li>
+        <strong>GPU and bandwidth</strong>: {profile.gpuAndBandwidthSplit.metal}
+        % normalised Geekbench Metal score and{' '}
+        {profile.gpuAndBandwidthSplit.memoryBandwidth}% normalised memory
+        bandwidth.
+      </li>
+      <li>
+        <strong>Capability score</strong> (zero to 100): the sum of each
+        normalised metric multiplied by its profile weight.
+      </li>
+      <li>
+        <strong>Value score</strong>: capability score divided by price,
+        multiplied by 1,000. This is the ranking key. Ties break on higher
+        capability score, then lower price, then listing id.
+      </li>
+      <li>
+        <strong>Pareto frontier</strong>: listings for which no other listing is
+        both at least as cheap and at least as capable.
+      </li>
+      <li>
+        <strong>Stable</strong>: in the top 10 under every profile.
+      </li>
+    </ul>
+    <p>{profile.reservations.assumption}</p>
+  </section>
+
+  <section aria-labelledby="profiles">
+    <h2 id="profiles">Profiles and weights</h2>
+    <div class="table-scroll">
+      <table>
+        <caption>Weights by profile. Each row sums to 100.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Profile</th>
+            <th scope="col" class="num">
+              Multi-core
+            </th>
+            <th scope="col" class="num">
+              Memory headroom
+            </th>
+            <th scope="col" class="num">
+              GPU and bandwidth
+            </th>
+            <th scope="col" class="num">
+              Single-core
+            </th>
+            <th scope="col" class="num">
+              Usable storage
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {results.profiles.map(result => (
+            <tr>
+              <th scope="row">
+                <code>{result.profile.id}</code>
+                {result.profile.id === results.defaultProfileId && ' (default)'}
+                <br />
+                <span class="meta">{result.profile.description}</span>
+              </th>
+              <td class="num">{result.profile.weights.multiCore}</td>
+              <td class="num">{result.profile.weights.memoryHeadroom}</td>
+              <td class="num">{result.profile.weights.gpuAndBandwidth}</td>
+              <td class="num">{result.profile.weights.singleCore}</td>
+              <td class="num">{result.profile.weights.usableStorage}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="floors">
+    <h2 id="floors">Floors and model classes</h2>
+    <p>
+      Listings with less than {profile.floors.minRamGb} GB of RAM or less than{' '}
+      {formatStorage(profile.floors.minSsdGb)} of SSD are excluded. A listing is
+      also excluded when its chip has no verified benchmark for a weighted
+      metric: figures are never estimated.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <caption>
+          Largest local model that fits in the memory headroom at 4-bit
+          quantisation
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Model class</th>
+            <th scope="col" class="num">
+              Minimum headroom
+            </th>
+            <th scope="col">Assumption</th>
+          </tr>
+        </thead>
+        <tbody>
+          {profile.modelClasses.map(modelClass => (
+            <tr>
+              <th scope="row">{modelClass.label}</th>
+              <td class="num">{modelClass.minHeadroomGb} GB</td>
+              <td>{modelClass.assumption}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="benchmarks">
+    <h2 id="benchmarks">Benchmarks</h2>
+    <p>
+      Processing figures are Geekbench {results.geekbenchVersion} single-core,
+      multi-core and Metal scores. One Geekbench version is used throughout;
+      versions are never mixed. Chip notation such as "12/16-core" means a
+      12-core CPU and a 16-core GPU.
+    </p>
+  </section>
+
+  <section aria-labelledby="sensitivity">
+    <h2 id="sensitivity">Storage sensitivity</h2>
+    <p>
+      Desktops are also re-scored with a {formatStorage(external.capacityGb)}{' '}
+      external SSD added:{' '}
+      <a href={external.sourceUrl} rel="noopener">
+        {external.product}
+      </a>{' '}
+      at {formatGbp(external.priceGbp)}, retrieved {external.retrievedDate}. The
+      result is in each <a href={withBase('reports/')}>report</a>.
+    </p>
+  </section>
+
+  <section aria-labelledby="caveats">
+    <h2 id="caveats">Caveats</h2>
+    <ul>
+      <li>
+        Benchmarks measure short synthetic workloads. Sustained performance,
+        thermal limits and real build or inference speed can differ.
+      </li>
+      <li>
+        Stock and prices change quickly, especially refurbished stock. Check the
+        source listing before buying.
+      </li>
+      <li>
+        Warranty and returns differ between new, Apple refurbished and
+        third-party refurbished machines.
+      </li>
+      <li>
+        Desktop prices exclude a display, keyboard and pointing device. Laptop
+        prices include them.
+      </li>
+      <li>
+        Colour and display-finish variants of one configuration are collapsed to
+        the cheapest.
+      </li>
+    </ul>
+  </section>
+</Base>

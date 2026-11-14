@@ -1,0 +1,45 @@
+---
+import Base from '../../layouts/Base.astro';
+import {conditionLabel, formatGbp} from '../../lib/format.js';
+import {withBase} from '../../lib/paths.js';
+import {
+  defaultProfileResult,
+  getSnapshots,
+  listingLookup,
+  listingName,
+} from '../../lib/snapshots.js';
+
+const snapshots = await getSnapshots();
+---
+
+<Base
+  title="Reports"
+  description="Every Mac value index snapshot, newest first, with the full report and downloads."
+  path="reports/"
+>
+  <h1>Reports</h1>
+  <p>Every snapshot, newest first.</p>
+  <ul class="report-list">
+    {snapshots.map(snapshot => {
+      const {results, date, isLatest} = snapshot.data;
+      const result = defaultProfileResult(results);
+      const winner = listingLookup(results).get(
+        result.conclusion.winnerListingId ?? '',
+      );
+      return (
+        <li>
+          <a href={withBase(`reports/${date}/`)}>
+            <strong>{date}</strong>
+          </a>
+          {isLatest && <span class="flag">Latest</span>}
+          <p class="meta">
+            {results.listings.length} listings.{' '}
+            {winner === undefined
+              ? 'No listing was ranked.'
+              : `Best value: ${listingName(winner)} (${conditionLabel(winner.condition)}) at ${formatGbp(winner.priceGbp)}.`}
+          </p>
+        </li>
+      );
+    })}
+  </ul>
+</Base>

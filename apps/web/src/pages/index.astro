@@ -1,0 +1,272 @@
+---
+import Chart from '../components/Chart.astro';
+import {RankingTable} from '../components/RankingTable.tsx';
+import Base from '../layouts/Base.astro';
+import {
+  conditionLabel,
+  daysBetween,
+  formatGbp,
+  formatNumber,
+  formatPercent,
+  formatStorage,
+  isoDate,
+} from '../lib/format.js';
+import {withBase} from '../lib/paths.js';
+import {buildRankingData} from '../lib/ranking-data.js';
+import {
+  defaultProfileResult,
+  getLatestSnapshot,
+  listingLookup,
+  listingName,
+} from '../lib/snapshots.js';
+
+const STALE_AFTER_DAYS = 14;
+
+const snapshot = await getLatestSnapshot();
+const {results, date} = snapshot.data;
+const result = defaultProfileResult(results);
+const listings = listingLookup(results);
+const rankOf = new Map(result.ranking.map(entry => [entry.listingId, entry]));
+const winner = listings.get(result.conclusion.winnerListingId ?? '');
+const winnerEntry = rankOf.get(winner?.id ?? '');
+const top10 = result.ranking.filter(entry => entry.isTop10);
+const ageDays = daysBetween(date, isoDate(new Date()));
+const stale = ageDays > STALE_AFTER_DAYS;
+const rankingData = buildRankingData(results);
+const unverifiedChips = results.chips.filter(
+  chip => chip.collectedBy === 'agent',
+).length;
+const excluded = result.exclusions.length;
+const description = `Which Apple silicon Mac gives the most development capability per £ in the UK? Prices collected ${date}. ${result.conclusion.text}`;
+---
+
+<Base
+  title="Mac value index"
+  description={description}
+  path=""
+  snapshotDate={date}
+>
+  <div class="lead">
+    <section aria-labelledby="conclusion-heading">
+      <h1 id="conclusion-heading">
+        The best-value Mac for development, {date}
+      </h1>
+      <p class="conclusion-text" data-testid="conclusion">
+        {result.conclusion.text}
+      </p>
+      {winner !== undefined && winnerEntry !== undefined && (
+        <div class="winner">
+          <p class="meta">
+            Best value under <code>{result.profile.id}</code>
+          </p>
+          <p>
+            <a href={winner.sourceUrl} rel="noopener">
+              <strong>{listingName(winner)}</strong>
+            </a>
+          </p>
+          <p class="winner-price">{formatGbp(winner.priceGbp)}</p>
+          <dl>
+            <dt>Chip</dt>
+            <dd>{winner.chip.label}</dd>
+            <dt>Condition</dt>
+            <dd>
+              {conditionLabel(winner.condition)}, {winner.seller}
+            </dd>
+            <dt>Value score</dt>
+            <dd>{formatNumber(winnerEntry.valueScore, 2)}</dd>
+          </dl>
+        </div>
+      )}
+      <p class="meta">
+        Prices collected on{' '}
+        <time datetime={date} data-testid="snapshot-date">
+          {date}
+        </time>
+        . See the <a href={withBase('sources/')}>sources</a>.
+      </p>
+      {stale && (
+        <p class="notice" role="note" data-testid="stale-notice">
+          <strong>Prices may be out of date.</strong> This snapshot is {ageDays}{' '}
+          days old.
+        </p>
+      )}
+      {(unverifiedChips > 0 || excluded > 0) && (
+        <p class="notice" role="note">
+          {unverifiedChips > 0 && (
+            <>
+              <strong>Benchmark figures await a human check.</strong>{' '}
+              {unverifiedChips} chip records were collected by a research
+              agent.{' '}
+            </>
+          )}
+          {excluded > 0 && (
+            <>
+              {excluded} listings are not ranked, most for want of a verified
+              benchmark. See <a href={withBase('sources/')}>sources</a>.
+            </>
+          )}
+        </p>
+      )}
+    </section>
+
+    <section aria-labelledby="top10-heading">
+      <h2 id="top10-heading">Top 10</h2>
+      <ol class="top10" data-testid="top10">
+        {top10.map(entry => {
+          const listing = listings.get(entry.listingId);
+          return (
+            listing !== undefined && (
+              <li>
+                <span class="top10-rank" aria-hidden="true">
+                  {entry.rank}
+                </span>
+                <p class="top10-head">
+                  <a class="top10-name" href={listing.sourceUrl} rel="noopener">
+                    {listing.model}
+                  </a>{' '}
+                  <span class="top10-detail">
+                    {listing.chip.label} · {listing.ramGb}GB RAM ·{' '}
+                    {formatStorage(listing.ssdGb)} SSD ·{' '}
+                    {conditionLabel(listing.condition)}
+                  </span>
+                </p>
+                <div class="top10-figures">
+                  <span class="top10-price">{formatGbp(listing.priceGbp)}</span>
+                  <span class="top10-value">
+                    Value {formatNumber(entry.valueScore, 2)}
+                  </span>
+                </div>
+                <p class="top10-summary">{entry.summary}</p>
+              </li>
+            )
+          );
+        })}
+      </ol>
+    </section>
+  </div>
+
+  <section aria-labelledby="chart-heading">
+    <h2 id="chart-heading">Price against capability</h2>
+    <Chart result={result} listings={listings} />
+  </section>
+
+  <section aria-labelledby="bands-heading">
+    <h2 id="bands-heading">Best pick per price band</h2>
+    <ul class="band-grid">
+      {result.priceBandPicks.map(pick => {
+        const listing = listings.get(pick.listingId ?? '');
+        const entry = rankOf.get(pick.listingId ?? '');
+        return (
+          <li class="band">
+            <h3>{pick.label}</h3>
+            {listing !== undefined && entry !== undefined ? (
+              <>
+                <p>
+                  <a href={listing.sourceUrl} rel="noopener">
+                    <strong>{listingName(listing)}</strong>
+                  </a>
+                </p>
+                <p class="meta">
+                  {listing.chip.label}, {conditionLabel(listing.condition)}
+                </p>
+                <p>
+                  {formatGbp(listing.priceGbp)} · rank {entry.rank} · value{' '}
+                  {formatNumber(entry.valueScore, 2)}
+                </p>
+              </>
+            ) : (
+              <p class="meta">No ranked listing in this band.</p>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  </section>
+
+  <section aria-labelledby="ranking-heading" id="ranking">
+    <h2 id="ranking-heading">Full ranking</h2>
+    <p class="meta">
+      Every ranking is calculated in advance. Switching profile shows that
+      profile's ranking; filtering and sorting never change a rank.
+    </p>
+    <RankingTable client:load data={rankingData} />
+  </section>
+
+  <section aria-labelledby="refurb-heading">
+    <h2 id="refurb-heading">New versus refurbished</h2>
+    {results.newVersusRefurbished.length === 0 ? (
+      <p>
+        No configuration in this snapshot is available both new and refurbished.
+      </p>
+    ) : (
+      <div class="table-scroll">
+        <table>
+          <caption>
+            Configurations available new and in another condition, with the
+            saving against the new price
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Configuration</th>
+              <th scope="col" class="num">
+                New
+              </th>
+              <th scope="col">Alternative</th>
+              <th scope="col" class="num">
+                Price
+              </th>
+              <th scope="col" class="num">
+                Saving
+              </th>
+              <th scope="col" class="num">
+                Saving %
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {results.newVersusRefurbished.flatMap(comparison =>
+              comparison.alternatives.map(alternative => {
+                const listing = listings.get(alternative.listingId);
+                return (
+                  <tr>
+                    <th scope="row">
+                      {comparison.model} {comparison.chipLabel}{' '}
+                      {comparison.ramGb}GB {formatStorage(comparison.ssdGb)}
+                    </th>
+                    <td class="num">{formatGbp(comparison.newPriceGbp)}</td>
+                    <td>
+                      {listing === undefined ? (
+                        conditionLabel(alternative.condition)
+                      ) : (
+                        <a href={listing.sourceUrl} rel="noopener">
+                          {conditionLabel(alternative.condition)},{' '}
+                          {alternative.seller}
+                        </a>
+                      )}
+                    </td>
+                    <td class="num">{formatGbp(alternative.priceGbp)}</td>
+                    <td class="num">{formatGbp(alternative.savingGbp)}</td>
+                    <td class="num">
+                      {formatPercent(alternative.savingPercent)}
+                    </td>
+                  </tr>
+                );
+              }),
+            )}
+          </tbody>
+        </table>
+      </div>
+    )}
+  </section>
+
+  <section aria-labelledby="more-heading">
+    <h2 id="more-heading">More detail</h2>
+    <p>
+      {results.stability.summary} {result.storageSensitivity.summary}
+    </p>
+    <p>
+      Read the <a href={withBase(`reports/${date}/`)}>full report</a> or the{' '}
+      <a href={withBase('methodology/')}>methodology</a>.
+    </p>
+  </section>
+</Base>

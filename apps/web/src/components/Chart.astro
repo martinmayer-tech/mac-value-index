@@ -1,0 +1,102 @@
+---
+import type {ProfileResult, ResultListing} from '@mvi/contracts';
+
+import {chartPoints, renderChart} from '../lib/chart.js';
+import {conditionLabel, formatGbp, formatNumber} from '../lib/format.js';
+import {listingName} from '../lib/snapshots.js';
+
+interface Props {
+  result: ProfileResult;
+  listings: ReadonlyMap<string, ResultListing>;
+}
+
+const {result, listings} = Astro.props;
+const points = chartPoints(result, listings, listingName);
+const svg = renderChart(points);
+const conditions = [...new Set(points.map(point => point.condition))];
+const frontier = points.filter(point => point.pareto);
+const prices = points.map(point => point.priceGbp);
+const symbolPaths = {
+  new: 'M8 3a5 5 0 1 0 0 10a5 5 0 1 0 0-10z',
+  'apple-refurbished': 'M3.5 3.5h9v9h-9z',
+  'third-party-refurbished': 'M8 2.5l5.5 10h-11z',
+};
+---
+
+<div class="chart">
+  <figure>
+    <p id="chart-title" class="visually-hidden">
+      Price against capability score for every ranked listing
+    </p>
+    <ul class="chart-legend" aria-label="Chart legend">
+      {conditions.map(condition => (
+        <li>
+          <svg viewBox="0 0 16 16" aria-hidden="true">
+            <path class={`condition-${condition}`} d={symbolPaths[condition]} />
+          </svg>
+          {conditionLabel(condition)}
+        </li>
+      ))}
+      <li>
+        <svg viewBox="0 0 16 16" aria-hidden="true">
+          <path
+            class="frontier"
+            d="M1 8h14"
+            fill="none"
+            stroke-width="1.5"
+            stroke-dasharray="4 3"
+          ></path>
+        </svg>
+        Pareto frontier
+      </li>
+      <li>Numbers mark the top 10 by value score</li>
+    </ul>
+    <Fragment set:html={svg} />
+    <figcaption id="chart-desc" class="meta">
+      {points.length} listings ranked under the default profile, from{' '}
+      {formatGbp(Math.min(...prices))} to {formatGbp(Math.max(...prices))}.{' '}
+      {frontier.length} are on the Pareto frontier: no other listing is both
+      cheaper and more capable. Shape and colour both show the condition. The
+      same figures are in the <a href="#ranking">ranking table</a>, which lists
+      price, capability score and Pareto status for every listing.
+    </figcaption>
+  </figure>
+  <details>
+    <summary>Chart data: Pareto frontier and top 10</summary>
+    <div class="table-scroll">
+      <table>
+        <caption>
+          Listings on the Pareto frontier or in the top 10, in rank order
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Rank</th>
+            <th scope="col">Configuration</th>
+            <th scope="col">Condition</th>
+            <th scope="col" class="num">
+              Price
+            </th>
+            <th scope="col" class="num">
+              Capability
+            </th>
+            <th scope="col">Pareto frontier</th>
+          </tr>
+        </thead>
+        <tbody>
+          {points
+            .filter(point => point.pareto || point.top10)
+            .map(point => (
+              <tr>
+                <td>{point.rank}</td>
+                <th scope="row">{point.name}</th>
+                <td>{conditionLabel(point.condition)}</td>
+                <td class="num">{formatGbp(point.priceGbp)}</td>
+                <td class="num">{formatNumber(point.capabilityScore, 1)}</td>
+                <td>{point.pareto ? 'Yes' : 'No'}</td>
+              </tr>
+            ))}
+        </tbody>
+      </table>
+    </div>
+  </details>
+</div>

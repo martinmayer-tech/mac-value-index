@@ -1,0 +1,73 @@
+schemaVersion: 1
+id: secondary-dev-llm
+name: Secondary development machine with local LLMs
+description: >-
+  A secondary development machine for Docker with multiple containers, Xcode builds and simulators, and several local LLMs. High unified memory is a bonus, not a hard requirement.
+isDefault: true
+# Weights must sum to 100.
+weights:
+  multiCore: 30
+  memoryHeadroom: 35
+  gpuAndBandwidth: 15
+  singleCore: 10
+  usableStorage: 10
+gpuAndBandwidthSplit:
+  # The "GPU and bandwidth" metric is half normalised Geekbench Metal score
+  # and half normalised memory bandwidth.
+  metal: 50
+  memoryBandwidth: 50
+reservations:
+  memoryGb: 12
+  storageGb: 150
+  assumption: >-
+    12 GB of RAM is reserved for macOS, Docker and Xcode. 150 GB of SSD is
+    reserved for macOS, Xcode, simulators and Docker images.
+floors:
+  minRamGb: 16
+  minSsdGb: 512
+belowSmallestClassLabel: below 7B
+# Largest model that fits in the memory headroom at 4-bit quantisation.
+# Assumption: weights take about 0.6 GB per billion parameters (4-bit
+# weights with quantisation overhead), plus roughly 15 to 25% for context
+# and runtime. Thresholds are rounded up to whole GB.
+modelClasses:
+  - label: 7B
+    minHeadroomGb: 6
+    assumption: About 4.5 GB of weights plus context and runtime.
+  - label: 14B
+    minHeadroomGb: 11
+    assumption: About 9 GB of weights plus context and runtime.
+  - label: 32B
+    minHeadroomGb: 22
+    assumption: About 19 GB of weights plus context and runtime.
+  - label: 70B
+    minHeadroomGb: 45
+    assumption: About 40 GB of weights plus context and runtime.
+  - label: 120B+
+    minHeadroomGb: 75
+    assumption: About 68 GB of weights plus context and runtime.
+priceBands:
+  - id: under-1000
+    label: Under £1,000
+    minGbp: 0
+    maxGbp: 1000
+  - id: 1000-to-2000
+    label: £1,000–£2,000
+    minGbp: 1000
+    maxGbp: 2000
+  - id: 2000-to-3500
+    label: £2,000–£3,500
+    minGbp: 2000
+    maxGbp: 3500
+  - id: over-3500
+    label: Over £3,500
+    minGbp: 3500
+    maxGbp: null
+# 2 TB external Thunderbolt SSD used for the desktop storage sensitivity.
+# Price read from the Apple UK store on the retrieved date.
+externalStorage:
+  product: SanDisk Professional PRO-G40 SSD 2TB (Thunderbolt 3)
+  capacityGb: 2000
+  priceGbp: 699.95
+  sourceUrl: https://www.apple.com/uk/shop/product/hru62zm/a/sandisk-professional-pro-g40%E2%84%A2-ssd-2tb
+  retrievedDate: '2026-11-14'
