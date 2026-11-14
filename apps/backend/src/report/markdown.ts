@@ -268,8 +268,8 @@ function sourcesSection(results: Results): string {
     chip.collectedBy,
     chip.retrievedDate,
     chip.sources
-      .map((source, index) => link(String(index + 1), source.url))
-      .join(' '),
+      .map(source => link(new URL(source.url).hostname, source.url))
+      .join(', '),
   ]);
   const failed = results.sources.filter(source => source.status !== 'ok');
   return [

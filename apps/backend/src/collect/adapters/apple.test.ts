@@ -372,6 +372,9 @@ describe('apple-uk-new', () => {
       [`${STORE}/product/MHQN4B/A`]: {
         redirectTo: `${family}/${m5pro}-24gb-memory-512gb-storage`,
       },
+      [`${STORE}/product/MHQK4B/A`]: {
+        redirectTo: `${family}/${m6}-16gb-memory-256gb-storage`,
+      },
       [`${family}/${m5pro}-24gb-memory-512gb-storage`]: {
         body: await fixture('apple/mac-mini-m5-pro-15-16-24gb-512gb.html'),
       },

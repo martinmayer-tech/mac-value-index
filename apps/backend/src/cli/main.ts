@@ -22,7 +22,8 @@ function findRoot(start: string): string {
 }
 
 process.exitCode = await runCli(process.argv.slice(2), {
-  root: findRoot(process.cwd()),
+  // MVI_ROOT points the CLI at another data root, such as a test fixture.
+  root: process.env['MVI_ROOT'] ?? findRoot(process.cwd()),
   out: line => {
     process.stdout.write(`${line}\n`);
   },

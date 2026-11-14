@@ -7,8 +7,8 @@
 // example:
 //   /uk/shop/buy-mac/mac-mini/m5-pro-chip-15-core-cpu-16-core-gpu-48gb-memory-1tb-storage
 //
-// The adapter resolves one standard configuration per chip tier to learn
-// the page-name pattern, then requests every memory and storage
+// The adapter resolves the standard configuration of each chip tier to
+// learn the page-name pattern, then requests every memory and storage
 // combination. A combination Apple does not sell redirects to the family
 // page and is skipped. Colour and display finish are not enumerated.
 
@@ -250,10 +250,13 @@ async function collectFamily(
     selection.data.configDisplayValues[STORAGE_KEY].variantOrder;
   const tiers = findTiers(selection.data);
 
-  // Learn the page-name pattern for each size from a standard configuration.
-  const seeds = new Map<string, string>();
+  // Learn the page-name pattern from standard configurations. A tier with
+  // its own part number uses its own page name; a configure-to-order tier
+  // borrows the pattern of a standard configuration of the same size.
+  const ownSeeds = new Map<Tier, string>();
+  const groupSeeds = new Map<string, string>();
   for (const tier of tiers) {
-    if (tier.partNumber === null || seeds.has(tier.group)) {
+    if (tier.partNumber === null) {
       continue;
     }
     const resolved = await context.http.get(
@@ -261,13 +264,16 @@ async function collectFamily(
     );
     const slug = slugOf(resolved.finalUrl, family);
     if (resolved.status === 200 && slug !== null) {
-      seeds.set(tier.group, slug);
+      ownSeeds.set(tier, slug);
+      if (!groupSeeds.has(tier.group)) {
+        groupSeeds.set(tier.group, slug);
+      }
     }
   }
 
   const listings: RawListing[] = [];
   for (const tier of tiers) {
-    const seed = seeds.get(tier.group);
+    const seed = ownSeeds.get(tier) ?? groupSeeds.get(tier.group);
     const tierSlug = seed === undefined ? null : slugForTier(seed, tier.key);
     if (tierSlug === null) {
       context.warn(`${family}: no page pattern for chip tier ${tier.key}.`);

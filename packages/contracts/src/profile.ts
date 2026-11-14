@@ -11,15 +11,8 @@ import {
   schemaVersionSchema,
   slugSchema,
 } from './common.js';
+import {METRIC_KEYS} from './constants.js';
 
-/** The five weighted metrics, in display order. */
-export const METRIC_KEYS = [
-  'multiCore',
-  'memoryHeadroom',
-  'gpuAndBandwidth',
-  'singleCore',
-  'usableStorage',
-] as const;
 export const metricKeySchema = z.enum(METRIC_KEYS);
 export type MetricKey = z.infer<typeof metricKeySchema>;
 

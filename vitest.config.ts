@@ -5,12 +5,21 @@ import {defineConfig} from 'vitest/config';
 // vitest requires a default export from its config file.
 export default defineConfig({
   resolve: {
-    alias: {
-      // Tests run against contract sources, so no build step is needed.
-      '@mvi/contracts': fileURLToPath(
-        new URL('./packages/contracts/src/index.ts', import.meta.url),
-      ),
-    },
+    // Tests run against contract sources, so no build step is needed.
+    alias: [
+      {
+        find: /^@mvi\/contracts\/constants$/,
+        replacement: fileURLToPath(
+          new URL('./packages/contracts/src/constants.ts', import.meta.url),
+        ),
+      },
+      {
+        find: /^@mvi\/contracts$/,
+        replacement: fileURLToPath(
+          new URL('./packages/contracts/src/index.ts', import.meta.url),
+        ),
+      },
+    ],
   },
   test: {
     include: ['{apps,packages}/*/src/**/*.test.{ts,tsx}'],

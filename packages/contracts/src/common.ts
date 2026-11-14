@@ -1,7 +1,12 @@
 import {z} from 'zod';
 
-/** Current schema version, shared by every data file. */
-export const SCHEMA_VERSION = 1;
+import {
+  ADAPTER_KINDS,
+  COLLECTED_BY,
+  CONDITIONS,
+  FORM_FACTORS,
+  SCHEMA_VERSION,
+} from './constants.js';
 
 export const schemaVersionSchema = z.literal(SCHEMA_VERSION);
 
@@ -26,23 +31,15 @@ export const gbpSchema = z
   .positive()
   .refine(isWholePence, {message: 'must be a whole number of pence'});
 
-export const CONDITIONS = [
-  'new',
-  'apple-refurbished',
-  'third-party-refurbished',
-] as const;
 export const conditionSchema = z.enum(CONDITIONS);
 export type Condition = z.infer<typeof conditionSchema>;
 
-export const FORM_FACTORS = ['desktop', 'laptop'] as const;
 export const formFactorSchema = z.enum(FORM_FACTORS);
 export type FormFactor = z.infer<typeof formFactorSchema>;
 
-export const COLLECTED_BY = ['structured', 'agent', 'manual'] as const;
 export const collectedBySchema = z.enum(COLLECTED_BY);
 export type CollectedBy = z.infer<typeof collectedBySchema>;
 
-export const ADAPTER_KINDS = ['structured', 'agent'] as const;
 export const adapterKindSchema = z.enum(ADAPTER_KINDS);
 export type AdapterKind = z.infer<typeof adapterKindSchema>;
 

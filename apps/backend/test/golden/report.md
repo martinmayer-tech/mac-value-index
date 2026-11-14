@@ -113,11 +113,11 @@ Chip specifications and benchmarks:
 
 | Chip | Collected by | Retrieved | Sources |
 | --- | --- | --- | --- |
-| m4-10c-10g | manual | 2026-01-05 | [1](https://example.com/chip) |
-| m4-max-16c-40g | manual | 2026-01-05 | [1](https://example.com/chip) |
-| m4-pro-12c-16g | manual | 2026-01-05 | [1](https://example.com/chip) |
-| m5-ultra-30c-64g | agent | 2026-01-05 | [1](https://example.com/chip) |
-| m6-10c-10g | manual | 2026-01-05 | [1](https://example.com/chip) |
+| m4-10c-10g | manual | 2026-01-05 | [example.com](https://example.com/chip) |
+| m4-max-16c-40g | manual | 2026-01-05 | [example.com](https://example.com/chip) |
+| m4-pro-12c-16g | manual | 2026-01-05 | [example.com](https://example.com/chip) |
+| m5-ultra-30c-64g | agent | 2026-01-05 | [example.com](https://example.com/chip) |
+| m6-10c-10g | manual | 2026-01-05 | [example.com](https://example.com/chip) |
 
 ## Appendix: full ranking
 

@@ -148,7 +148,7 @@ export function createConfig({tsconfigRootDir}) {
         parserOptions: {
           projectService: {
             // Tool config files are not part of any package's project.
-            allowDefaultProject: ['*.config.ts', 'apps/*/*.config.ts'],
+            allowDefaultProject: ['*.config.ts'],
           },
           tsconfigRootDir,
         },
@@ -247,6 +247,11 @@ export function createConfig({tsconfigRootDir}) {
       languageOptions: {
         ...jsxA11y.flatConfigs.strict.languageOptions,
         globals: globals.browser,
+      },
+      rules: {
+        ...jsxA11y.flatConfigs.strict.rules,
+        // A label may wrap its control or point to it with htmlFor.
+        'jsx-a11y/label-has-associated-control': ['error', {assert: 'either'}],
       },
     },
     {
