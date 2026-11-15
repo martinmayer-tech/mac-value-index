@@ -1,0 +1,50 @@
+{
+  "name": "mac-value-index",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Which Apple silicon Mac gives the most development capability per \u00a3 in the UK right now?",
+  "license": "Apache-2.0",
+  "type": "module",
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22.23.4",
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "backend": "pnpm --silent build:ts && node apps/backend/dist/cli/main.js",
+    "build": "pnpm build:ts && pnpm --filter web build",
+    "build:ts": "tsc --build",
+    "check": "pnpm lint && pnpm format:check && pnpm typecheck && pnpm test:coverage",
+    "ci:local": "bash scripts/ci-local.sh",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "pnpm prepare:types && eslint . --max-warnings 0",
+    "prepare": "husky",
+    "prepare:types": "pnpm build:ts && pnpm --filter web exec astro sync",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "pnpm --filter web test:e2e",
+    "typecheck": "pnpm build:ts && pnpm --filter web typecheck"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "@mvi/config": "workspace:*",
+    "@types/node": "^22.19.0",
+    "@vitest/coverage-v8": "^5.1.0",
+    "eslint": "^10.15.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "prettier": "^3.10.1",
+    "prettier-plugin-astro": "^1.1.2",
+    "typescript": "~6.0.3",
+    "vitest": "^5.1.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,mjs,cjs,astro}": [
+      "eslint --max-warnings 0 --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yaml,yml,css}": "prettier --write"
+  }
+}

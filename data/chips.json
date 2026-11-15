@@ -1,0 +1,701 @@
+{
+  "schemaVersion": 1,
+  "geekbenchVersion": "6",
+  "retrievedDate": "2026-11-14",
+  "chips": [
+    {
+      "id": "m2-8c-10g",
+      "family": "M2",
+      "generation": 2,
+      "cpuCores": {
+        "total": 8,
+        "performance": 4,
+        "efficiency": 4
+      },
+      "gpuCores": 10,
+      "geekbench": {
+        "singleCore": 2609,
+        "multiCore": 10083,
+        "metal": 44473
+      },
+      "memoryBandwidthGbPerSec": 100,
+      "maxMemoryGb": 24,
+      "sources": [
+        {
+          "url": "https://www.notebookcheck.net/Apple-M2-Processor-Benchmarks-and-Specs.632312.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6.7.1 CPU, average of Notebookcheck test units: single-core 2609 (2587 to 2650), multi-core 10083 (10034 to 10120)."
+        },
+        {
+          "url": "https://www.notebookcheck.net/Apple-M2-10-Core-GPU-Benchmarks-and-Specs.632306.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6 Metal average 44473 (42013 to 45946)."
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2022/06/apple-unveils-m2-with-breakthrough-performance-and-capabilities/",
+          "retrievedDate": "2026-11-14",
+          "note": "\"M2 delivers 100GB/s of unified memory bandwidth ... and can be configured with up to 24GB of fast unified memory.\""
+        }
+      ],
+      "retrievedDate": "2026-11-14",
+      "collectedBy": "agent",
+      "note": "Collected by a research agent from web-search snippets; not yet checked against the live pages. Apple: \"8-core CPU with 4 performance cores and 4 efficiency cores\"."
+    },
+    {
+      "id": "m4-8c-8g",
+      "family": "M4",
+      "generation": 4,
+      "cpuCores": {
+        "total": 8,
+        "performance": 4,
+        "efficiency": 4
+      },
+      "gpuCores": 8,
+      "geekbench": {
+        "singleCore": 3660,
+        "multiCore": 14025,
+        "metal": null
+      },
+      "memoryBandwidthGbPerSec": 120,
+      "maxMemoryGb": 24,
+      "sources": [
+        {
+          "url": "https://www.notebookcheck.net/Apple-M4-8-cores-Processor-Benchmarks-and-Specs.910075.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6.7.1 CPU, single review unit (iMac 24-inch 2024, 16 GB): single-core 3660, multi-core 14025."
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2024/10/apple-introduces-m4-pro-and-m4-max/",
+          "retrievedDate": "2026-11-14",
+          "note": "Memory bandwidth. \"M4 supports up to 32GB of unified memory and has higher memory bandwidth of 120GB/s\"; \"M4 Pro supports up to 64GB of fast unified memory and 273GB/s of memory bandwidth\"; \"M4 Max supports up to 128GB of fast unified memory and up to 546GB/s of memory bandwidth\"."
+        },
+        {
+          "url": "https://support.apple.com/en-us/121556",
+          "retrievedDate": "2026-11-14",
+          "note": "iMac (24-inch, 2024, two ports): \"8-core CPU with 4 performance cores and 4 efficiency cores\"; 16GB memory, configurable to 24GB."
+        }
+      ],
+      "retrievedDate": "2026-11-14",
+      "collectedBy": "agent",
+      "note": "Collected by a research agent from web-search snippets; not yet checked against the live pages. No Geekbench 6 Metal figure was found for an 8-core CPU, 8-core GPU machine, so Metal is null."
+    },
+    {
+      "id": "m4-10c-8g",
+      "family": "M4",
+      "generation": 4,
+      "cpuCores": {
+        "total": 10,
+        "performance": 4,
+        "efficiency": 6
+      },
+      "gpuCores": 8,
+      "geekbench": {
+        "singleCore": 3747,
+        "multiCore": 14978,
+        "metal": 48032
+      },
+      "memoryBandwidthGbPerSec": 120,
+      "maxMemoryGb": 32,
+      "sources": [
+        {
+          "url": "https://www.notebookcheck.net/Apple-M4-10-cores-Processor-Benchmarks-and-Specs.835975.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6.7 CPU, average of 6 Notebookcheck test units: single-core 3747 (3655 to 3838), multi-core 14978 (14690 to 15173)."
+        },
+        {
+          "url": "https://www.notebookcheck.net/Apple-M4-8-core-GPU-Benchmarks-and-Specs.910076.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6.7.1 Metal 48032, single device (MacBook Air 13 M4)."
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2024/10/apple-introduces-m4-pro-and-m4-max/",
+          "retrievedDate": "2026-11-14",
+          "note": "Memory bandwidth. \"M4 supports up to 32GB of unified memory and has higher memory bandwidth of 120GB/s\"; \"M4 Pro supports up to 64GB of fast unified memory and 273GB/s of memory bandwidth\"; \"M4 Max supports up to 128GB of fast unified memory and up to 546GB/s of memory bandwidth\"."
+        }
+      ],
+      "retrievedDate": "2026-11-14",
+      "collectedBy": "agent",
+      "note": "Collected by a research agent from web-search snippets; not yet checked against the live pages. CPU figures are the average for all M4 10-core devices. Apple: \"10-core CPU with 4 performance cores and 6 efficiency cores\"."
+    },
+    {
+      "id": "m4-10c-10g",
+      "family": "M4",
+      "generation": 4,
+      "cpuCores": {
+        "total": 10,
+        "performance": 4,
+        "efficiency": 6
+      },
+      "gpuCores": 10,
+      "geekbench": {
+        "singleCore": 3747,
+        "multiCore": 14978,
+        "metal": 56075
+      },
+      "memoryBandwidthGbPerSec": 120,
+      "maxMemoryGb": 32,
+      "sources": [
+        {
+          "url": "https://www.notebookcheck.net/Apple-M4-10-cores-Processor-Benchmarks-and-Specs.835975.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6.7 CPU, average of 6 Notebookcheck test units: single-core 3747 (3655 to 3838), multi-core 14978 (14690 to 15173)."
+        },
+        {
+          "url": "https://www.notebookcheck.net/Apple-M4-10-core-GPU-Benchmarks-and-Specs.835807.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6.7.1 Metal average 56075 (53465 to 57998)."
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2024/10/apple-introduces-m4-pro-and-m4-max/",
+          "retrievedDate": "2026-11-14",
+          "note": "Memory bandwidth. \"M4 supports up to 32GB of unified memory and has higher memory bandwidth of 120GB/s\"; \"M4 Pro supports up to 64GB of fast unified memory and 273GB/s of memory bandwidth\"; \"M4 Max supports up to 128GB of fast unified memory and up to 546GB/s of memory bandwidth\"."
+        }
+      ],
+      "retrievedDate": "2026-11-14",
+      "collectedBy": "agent",
+      "note": "Collected by a research agent from web-search snippets; not yet checked against the live pages. Apple: \"10-core CPU with 4 performance cores and 6 efficiency cores\"."
+    },
+    {
+      "id": "m4-pro-12c-16g",
+      "family": "M4 Pro",
+      "generation": 4,
+      "cpuCores": {
+        "total": 12,
+        "performance": 8,
+        "efficiency": 4
+      },
+      "gpuCores": 16,
+      "geekbench": {
+        "singleCore": 3870,
+        "multiCore": 20487,
+        "metal": 98333
+      },
+      "memoryBandwidthGbPerSec": 273,
+      "maxMemoryGb": 64,
+      "sources": [
+        {
+          "url": "https://www.notebookcheck.net/Apple-M4-Pro-12-cores-Processor-Benchmarks-and-Specs.922301.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6.7 CPU, average of Notebookcheck test units: single-core 3870, multi-core 20487 (20385 to 20617)."
+        },
+        {
+          "url": "https://www.notebookcheck.net/Apple-M4-Pro-16-Core-GPU-Benchmarks-and-Specs.937474.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6 Metal 98333."
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2024/10/apple-introduces-m4-pro-and-m4-max/",
+          "retrievedDate": "2026-11-14",
+          "note": "Memory bandwidth. \"M4 supports up to 32GB of unified memory and has higher memory bandwidth of 120GB/s\"; \"M4 Pro supports up to 64GB of fast unified memory and 273GB/s of memory bandwidth\"; \"M4 Max supports up to 128GB of fast unified memory and up to 546GB/s of memory bandwidth\"."
+        }
+      ],
+      "retrievedDate": "2026-11-14",
+      "collectedBy": "agent",
+      "note": "Collected by a research agent from web-search snippets; not yet checked against the live pages. Apple: \"12-core CPU with 8 performance cores and 4 efficiency cores\"."
+    },
+    {
+      "id": "m4-pro-14c-20g",
+      "family": "M4 Pro",
+      "generation": 4,
+      "cpuCores": {
+        "total": 14,
+        "performance": 10,
+        "efficiency": 4
+      },
+      "gpuCores": 20,
+      "geekbench": {
+        "singleCore": 3882,
+        "multiCore": 22527,
+        "metal": 113768
+      },
+      "memoryBandwidthGbPerSec": 273,
+      "maxMemoryGb": 64,
+      "sources": [
+        {
+          "url": "https://www.notebookcheck.net/Apple-M4-Pro-14-cores-Processor-Benchmarks-and-Specs.915303.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6 CPU average: single-core 3882 (3836 to 3927)."
+        },
+        {
+          "url": "https://www.notebookcheck.net/M4-Pro-14-cores-vs-M4-Pro-12-cores_18019_18557.247596.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6 multi-core average 22527 (22509 to 22544)."
+        },
+        {
+          "url": "https://www.notebookcheck.net/Apple-MacBook-Pro-14-2024-review-The-M4-Pro-and-matte-display-are-massive-upgrades.914597.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6 Metal, average of 2 units: 113768 (113258 to 114278)."
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2024/10/apple-introduces-m4-pro-and-m4-max/",
+          "retrievedDate": "2026-11-14",
+          "note": "Memory bandwidth. \"M4 supports up to 32GB of unified memory and has higher memory bandwidth of 120GB/s\"; \"M4 Pro supports up to 64GB of fast unified memory and 273GB/s of memory bandwidth\"; \"M4 Max supports up to 128GB of fast unified memory and up to 546GB/s of memory bandwidth\"."
+        }
+      ],
+      "retrievedDate": "2026-11-14",
+      "collectedBy": "agent",
+      "note": "Collected by a research agent from web-search snippets; not yet checked against the live pages. Apple: \"14-core CPU with 10 performance cores and 4 efficiency cores\"."
+    },
+    {
+      "id": "m4-max-14c-32g",
+      "family": "M4 Max",
+      "generation": 4,
+      "cpuCores": {
+        "total": 14,
+        "performance": 10,
+        "efficiency": 4
+      },
+      "gpuCores": 32,
+      "geekbench": {
+        "singleCore": 4004,
+        "multiCore": 23384,
+        "metal": 149499
+      },
+      "memoryBandwidthGbPerSec": 410,
+      "maxMemoryGb": 36,
+      "sources": [
+        {
+          "url": "https://www.notebookcheck.net/Apple-M4-Max-14-cores-Processor-Benchmarks-and-Specs.920365.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6.7 CPU, single review unit (MacBook Pro 14, 36 GB): single-core 4004, multi-core 23384."
+        },
+        {
+          "url": "https://www.notebookcheck.net/Apple-M4-Max-32-core-GPU-Benchmarks-and-Specs.920364.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6.7.1 Metal 149499, single device."
+        },
+        {
+          "url": "https://support.apple.com/en-us/121553",
+          "retrievedDate": "2026-11-14",
+          "note": "Memory bandwidth and cores. \"M4 Max with 14-core CPU and 32-core GPU (410GB/s memory bandwidth) or M4 Max with 16-core CPU and 40-core GPU (546GB/s memory bandwidth)\"."
+        }
+      ],
+      "retrievedDate": "2026-11-14",
+      "collectedBy": "agent",
+      "note": "Collected by a research agent from web-search snippets; not yet checked against the live pages. Apple: \"14-core CPU with 10 performance cores and 4 efficiency cores\"."
+    },
+    {
+      "id": "m4-max-16c-40g",
+      "family": "M4 Max",
+      "generation": 4,
+      "cpuCores": {
+        "total": 16,
+        "performance": null,
+        "efficiency": null
+      },
+      "gpuCores": 40,
+      "geekbench": {
+        "singleCore": 3880,
+        "multiCore": 25760,
+        "metal": 179746
+      },
+      "memoryBandwidthGbPerSec": 546,
+      "maxMemoryGb": 128,
+      "sources": [
+        {
+          "url": "https://www.notebookcheck.net/Apple-MacBook-Pro-16-M4-Max-review-The-M4-Max-is-one-of-the-fastest-mobile-processors.929593.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6.7 CPU, single review unit: single-core 3880, multi-core 25760."
+        },
+        {
+          "url": "https://www.notebookcheck.net/Apple-M4-Max-40-core-GPU-Benchmarks-and-Specs.920457.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6 Metal 179746, single device."
+        },
+        {
+          "url": "https://support.apple.com/en-us/121553",
+          "retrievedDate": "2026-11-14",
+          "note": "Memory bandwidth and cores. \"M4 Max with 14-core CPU and 32-core GPU (410GB/s memory bandwidth) or M4 Max with 16-core CPU and 40-core GPU (546GB/s memory bandwidth)\"."
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2024/10/apple-introduces-m4-pro-and-m4-max/",
+          "retrievedDate": "2026-11-14",
+          "note": "Memory bandwidth. \"M4 supports up to 32GB of unified memory and has higher memory bandwidth of 120GB/s\"; \"M4 Pro supports up to 64GB of fast unified memory and 273GB/s of memory bandwidth\"; \"M4 Max supports up to 128GB of fast unified memory and up to 546GB/s of memory bandwidth\"."
+        }
+      ],
+      "retrievedDate": "2026-11-14",
+      "collectedBy": "agent",
+      "note": "Collected by a research agent from web-search snippets; not yet checked against the live pages. The performance and efficiency core split was not read from a source, so it is null."
+    },
+    {
+      "id": "m5-10c-8g",
+      "family": "M5",
+      "generation": 5,
+      "cpuCores": {
+        "total": 10,
+        "performance": 4,
+        "efficiency": 6
+      },
+      "gpuCores": 8,
+      "geekbench": {
+        "singleCore": 4185,
+        "multiCore": 17072,
+        "metal": 66910
+      },
+      "memoryBandwidthGbPerSec": 153,
+      "maxMemoryGb": null,
+      "sources": [
+        {
+          "url": "https://www.notebookcheck.net/Insane-performance-and-efficiency-without-fans-Apple-MacBook-Air-13-M5-Entry-Review.1242707.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6.7, single review unit (MacBook Air 13 M5, 8-core GPU): single-core 4185, multi-core 17072, Metal 66910."
+        },
+        {
+          "url": "https://support.apple.com/en-us/126320",
+          "retrievedDate": "2026-11-14",
+          "note": "MacBook Air (M5) technical specifications: \"10-core CPU with 4 super cores and 6 efficiency cores\"; 153GB/s memory bandwidth."
+        }
+      ],
+      "retrievedDate": "2026-11-14",
+      "collectedBy": "agent",
+      "note": "Collected by a research agent from web-search snippets; not yet checked against the live pages. Apple names the four fast cores \"super cores\"; they are counted as performance cores here. Maximum memory for the 8-core GPU variant is unresolved."
+    },
+    {
+      "id": "m5-10c-10g",
+      "family": "M5",
+      "generation": 5,
+      "cpuCores": {
+        "total": 10,
+        "performance": 4,
+        "efficiency": 6
+      },
+      "gpuCores": 10,
+      "geekbench": {
+        "singleCore": 4228,
+        "multiCore": 17314,
+        "metal": 75932
+      },
+      "memoryBandwidthGbPerSec": 153,
+      "maxMemoryGb": 32,
+      "sources": [
+        {
+          "url": "https://www.notebookcheck.net/Apple-MacBook-Air-15-M5-Review-Very-powerful-fanless-and-without-competition.1244905.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6.7 CPU, average of 5 Notebookcheck test units: single-core 4228 (4128 to 4326), multi-core 17314 (16544 to 18054)."
+        },
+        {
+          "url": "https://www.notebookcheck.net/Apple-M5-GPU-Benchmarks-and-Specs.1139076.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6 Metal, average of 4 runs: 75932 (74568 to 77007)."
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2025/10/apple-unleashes-m5-the-next-big-leap-in-ai-performance-for-apple-silicon/",
+          "retrievedDate": "2026-11-14",
+          "note": "\"M5 offers unified memory bandwidth of 153GB/s\"; \"with 32GB of memory capacity\"."
+        }
+      ],
+      "retrievedDate": "2026-11-14",
+      "collectedBy": "agent",
+      "note": "Collected by a research agent from web-search snippets; not yet checked against the live pages. Apple: \"10-core CPU with 4 super cores and 6 efficiency cores\"; super cores are counted as performance cores here."
+    },
+    {
+      "id": "m5-pro-15c-16g",
+      "family": "M5 Pro",
+      "generation": 5,
+      "cpuCores": {
+        "total": 15,
+        "performance": 15,
+        "efficiency": 0
+      },
+      "gpuCores": 16,
+      "geekbench": {
+        "singleCore": 4302,
+        "multiCore": 25892,
+        "metal": null
+      },
+      "memoryBandwidthGbPerSec": 307,
+      "maxMemoryGb": null,
+      "sources": [
+        {
+          "url": "https://www.notebookcheck.net/Apple-M5-Pro-15-Core-Processor-Benchmarks-and-Specs.1244350.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6.7.1 CPU, single review unit (MacBook Pro 14-inch 2026, 24 GB): single-core 4302, multi-core 25892."
+        },
+        {
+          "url": "https://support.apple.com/en-us/126318",
+          "retrievedDate": "2026-11-14",
+          "note": "MacBook Pro (2026) technical specifications: 15-core CPU \"with 5 super cores and 10 performance cores\"."
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2026/03/apple-debuts-m5-pro-and-m5-max-to-supercharge-the-most-demanding-pro-workflows/",
+          "retrievedDate": "2026-11-14",
+          "note": "Memory bandwidth and cores. \"M5 Pro supports up to 64GB of unified memory with up to 307GB/s of memory bandwidth\"; \"M5 Max supports up to 128GB of unified memory with up to 614GB/s of memory bandwidth\"; \"up-to-18-core CPU with 6 super cores ... and 12 all-new performance cores\"."
+        }
+      ],
+      "retrievedDate": "2026-11-14",
+      "collectedBy": "agent",
+      "note": "Collected by a research agent from web-search snippets; not yet checked against the live pages. No Geekbench 6 Metal figure was found for the 16-core GPU, so Metal is null. Apple names no efficiency cores: 5 super cores and 10 performance cores. Maximum memory for this variant is unresolved."
+    },
+    {
+      "id": "m5-pro-18c-20g",
+      "family": "M5 Pro",
+      "generation": 5,
+      "cpuCores": {
+        "total": 18,
+        "performance": 18,
+        "efficiency": 0
+      },
+      "gpuCores": 20,
+      "geekbench": {
+        "singleCore": 4295,
+        "multiCore": 28436,
+        "metal": 137187
+      },
+      "memoryBandwidthGbPerSec": 307,
+      "maxMemoryGb": 64,
+      "sources": [
+        {
+          "url": "https://www.notebookcheck.net/Apple-MacBook-Pro-16-2026-Review-M5-Pro-makes-one-of-the-best-multimedia-laptops-even-better.1245523.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6.7 CPU, single review unit: single-core 4295, multi-core 28436."
+        },
+        {
+          "url": "https://www.notebookcheck.net/Apple-M5-Pro-20-Core-GPU-Benchmarks-and-Specs.1244913.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6.7.1 Metal 137187, single device (MacBook Pro 16 2026, 64 GB)."
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2026/03/apple-debuts-m5-pro-and-m5-max-to-supercharge-the-most-demanding-pro-workflows/",
+          "retrievedDate": "2026-11-14",
+          "note": "Memory bandwidth and cores. \"M5 Pro supports up to 64GB of unified memory with up to 307GB/s of memory bandwidth\"; \"M5 Max supports up to 128GB of unified memory with up to 614GB/s of memory bandwidth\"; \"up-to-18-core CPU with 6 super cores ... and 12 all-new performance cores\"."
+        }
+      ],
+      "retrievedDate": "2026-11-14",
+      "collectedBy": "agent",
+      "note": "Collected by a research agent from web-search snippets; not yet checked against the live pages. Apple: 6 super cores and 12 performance cores; no efficiency cores named."
+    },
+    {
+      "id": "m5-max-18c-32g",
+      "family": "M5 Max",
+      "generation": 5,
+      "cpuCores": {
+        "total": 18,
+        "performance": 18,
+        "efficiency": 0
+      },
+      "gpuCores": 32,
+      "geekbench": {
+        "singleCore": 4235,
+        "multiCore": 28746,
+        "metal": null
+      },
+      "memoryBandwidthGbPerSec": 460,
+      "maxMemoryGb": 36,
+      "sources": [
+        {
+          "url": "https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-m5-max-18-core-cpu-32-core-gpu-14-2026-specs.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6 CPU, EveryMac average of user-submitted results: single-core 4235, multi-core 28746."
+        },
+        {
+          "url": "https://support.apple.com/en-us/126318",
+          "retrievedDate": "2026-11-14",
+          "note": "M5 Max with 32-core GPU: 460GB/s memory bandwidth."
+        },
+        {
+          "url": "https://support.apple.com/en-us/128107",
+          "retrievedDate": "2026-11-14",
+          "note": "Mac Studio (2026) technical specifications: core counts and memory options."
+        }
+      ],
+      "retrievedDate": "2026-11-14",
+      "collectedBy": "agent",
+      "note": "Collected by a research agent from web-search snippets; not yet checked against the live pages. Different source family (EveryMac) from most other rows. No Geekbench 6 Metal figure was found for the 32-core GPU, so Metal is null."
+    },
+    {
+      "id": "m5-max-18c-40g",
+      "family": "M5 Max",
+      "generation": 5,
+      "cpuCores": {
+        "total": 18,
+        "performance": 18,
+        "efficiency": 0
+      },
+      "gpuCores": 40,
+      "geekbench": {
+        "singleCore": 4292,
+        "multiCore": 29392,
+        "metal": 223119
+      },
+      "memoryBandwidthGbPerSec": 614,
+      "maxMemoryGb": 128,
+      "sources": [
+        {
+          "url": "https://www.notebookcheck.net/Apple-M5-Max-Processor-Benchmarks-and-Specs.1244918.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6.7.1 CPU, average of Notebookcheck test units: single-core 4292 (4200 to 4336), multi-core 29392 (29000 to 30057)."
+        },
+        {
+          "url": "https://www.notebookcheck.net/Apple-M5-Max-40-Core-GPU-Benchmarks-and-Specs.1245824.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6 Metal, average of 3 units: 223119 (222096 to 224987)."
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2026/03/apple-debuts-m5-pro-and-m5-max-to-supercharge-the-most-demanding-pro-workflows/",
+          "retrievedDate": "2026-11-14",
+          "note": "Memory bandwidth and cores. \"M5 Pro supports up to 64GB of unified memory with up to 307GB/s of memory bandwidth\"; \"M5 Max supports up to 128GB of unified memory with up to 614GB/s of memory bandwidth\"; \"up-to-18-core CPU with 6 super cores ... and 12 all-new performance cores\"."
+        }
+      ],
+      "retrievedDate": "2026-11-14",
+      "collectedBy": "agent",
+      "note": "Collected by a research agent from web-search snippets; not yet checked against the live pages. Apple: 6 super cores and 12 performance cores; no efficiency cores named."
+    },
+    {
+      "id": "m5-ultra-30c-64g",
+      "family": "M5 Ultra",
+      "generation": 5,
+      "cpuCores": {
+        "total": 30,
+        "performance": 30,
+        "efficiency": 0
+      },
+      "gpuCores": 64,
+      "geekbench": {
+        "singleCore": 4318,
+        "multiCore": 37777,
+        "metal": null
+      },
+      "memoryBandwidthGbPerSec": 1200,
+      "maxMemoryGb": null,
+      "sources": [
+        {
+          "url": "https://www.tomsguide.com/computing/apple-desktops/apple-mac-studio-m5-ultra-review",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6 CPU, single review unit (Mac Studio M5 Ultra 30-core CPU, 64-core GPU): single-core 4,318, multi-core 37,777."
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/",
+          "retrievedDate": "2026-11-14",
+          "note": "Memory bandwidth. \"M5 Ultra ... up to 512GB, and delivers a staggering 1.2TB/s of unified memory bandwidth\"."
+        },
+        {
+          "url": "https://support.apple.com/en-us/128107",
+          "retrievedDate": "2026-11-14",
+          "note": "Mac Studio (2026) technical specifications: core counts and memory options."
+        }
+      ],
+      "retrievedDate": "2026-11-14",
+      "collectedBy": "agent",
+      "note": "Collected by a research agent from web-search snippets; not yet checked against the live pages. No Geekbench 6 Metal figure was found (most outlets used Geekbench 7 for this chip), so Metal is null. Apple: 10 super cores and 20 performance cores. Maximum memory for this variant is unresolved."
+    },
+    {
+      "id": "m5-ultra-36c-80g",
+      "family": "M5 Ultra",
+      "generation": 5,
+      "cpuCores": {
+        "total": 36,
+        "performance": 36,
+        "efficiency": 0
+      },
+      "gpuCores": 80,
+      "geekbench": {
+        "singleCore": 4325,
+        "multiCore": 38370,
+        "metal": null
+      },
+      "memoryBandwidthGbPerSec": 1200,
+      "maxMemoryGb": 512,
+      "sources": [
+        {
+          "url": "https://everymac.com/systems/apple/mac-studio/specs/mac-studio-m5-ultra-36-core-cpu-80-core-gpu-2026-specs.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6 CPU, EveryMac average of user-submitted results: single-core 4325, multi-core 38370."
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/",
+          "retrievedDate": "2026-11-14",
+          "note": "Memory bandwidth. \"M5 Ultra ... up to 512GB, and delivers a staggering 1.2TB/s of unified memory bandwidth\"."
+        },
+        {
+          "url": "https://support.apple.com/en-us/128107",
+          "retrievedDate": "2026-11-14",
+          "note": "Mac Studio (2026) technical specifications: core counts and memory options."
+        }
+      ],
+      "retrievedDate": "2026-11-14",
+      "collectedBy": "agent",
+      "note": "Collected by a research agent from web-search snippets; not yet checked against the live pages. No Geekbench 6 Metal figure was found, so Metal is null. Apple: 12 super cores and 24 performance cores."
+    },
+    {
+      "id": "m6-10c-10g",
+      "family": "M6",
+      "generation": 6,
+      "cpuCores": {
+        "total": 10,
+        "performance": 5,
+        "efficiency": 5
+      },
+      "gpuCores": 10,
+      "geekbench": {
+        "singleCore": 4561,
+        "multiCore": 18758,
+        "metal": null
+      },
+      "memoryBandwidthGbPerSec": null,
+      "maxMemoryGb": 24,
+      "sources": [
+        {
+          "url": "https://everymac.com/systems/apple/imac/specs/imac-m6-10-core-cpu-10-core-gpu-two-ports-24-inch-2026-specs.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6 CPU, EveryMac average of user-submitted results: single-core 4561, multi-core 18758."
+        },
+        {
+          "url": "https://www.apple.com/imac/specs/",
+          "retrievedDate": "2026-11-14",
+          "note": "\"10-core CPU with 2 super cores, 3 performance cores, and 5 efficiency cores\"; 16GB, configurable to 24GB for the 10-core model."
+        }
+      ],
+      "retrievedDate": "2026-11-14",
+      "collectedBy": "agent",
+      "note": "Collected by a research agent from web-search snippets; not yet checked against the live pages. No Geekbench 6 Metal figure and no memory bandwidth figure were found for the 10-core M6, so both are null."
+    },
+    {
+      "id": "m6-12c-12g",
+      "family": "M6",
+      "generation": 6,
+      "cpuCores": {
+        "total": 12,
+        "performance": 6,
+        "efficiency": 6
+      },
+      "gpuCores": 12,
+      "geekbench": {
+        "singleCore": 4654,
+        "multiCore": 21302,
+        "metal": 101981
+      },
+      "memoryBandwidthGbPerSec": 170,
+      "maxMemoryGb": 32,
+      "sources": [
+        {
+          "url": "https://www.notebookcheck.net/Apple-M6-Processor-Benchmarks-and-Specs.1400249.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6.7 single-core average 4654 (4610 to 4698)."
+        },
+        {
+          "url": "https://www.notebookcheck.net/Compact-powerhouse-with-the-2-nm-M6-SoC-Apple-Mac-mini-2026-Review.1401148.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6.7 multi-core 21302, single review unit (Mac mini M6)."
+        },
+        {
+          "url": "https://www.notebookcheck.net/Apple-M6-12-Core-GPU-Benchmarks-and-Specs.1401995.0.html",
+          "retrievedDate": "2026-11-14",
+          "note": "Geekbench 6.7.1 Metal 101981, single device (Mac mini M6)."
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+          "retrievedDate": "2026-11-14",
+          "note": "\"up to 170GB/s of unified memory bandwidth\"."
+        },
+        {
+          "url": "https://support.apple.com/en-us/128108",
+          "retrievedDate": "2026-11-14",
+          "note": "Mac mini (M6): \"12-core CPU with 2 super cores, 4 performance cores, and 6 efficiency cores\"; 16GB (153GB/s), 24GB or 32GB (170GB/s)."
+        }
+      ],
+      "retrievedDate": "2026-11-14",
+      "collectedBy": "agent",
+      "note": "Collected by a research agent from web-search snippets; not yet checked against the live pages. The Metal figure is contested: other outlets report roughly 87,000 to 91,000 for the same chip. Memory bandwidth is 153GB/s with 16GB and 170GB/s with 24GB or 32GB; the higher chip-level figure is recorded."
+    }
+  ]
+}

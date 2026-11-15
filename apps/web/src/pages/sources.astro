@@ -1,0 +1,187 @@
+---
+import Base from '../layouts/Base.astro';
+import {conditionLabel, formatNumber} from '../lib/format.js';
+import {withBase} from '../lib/paths.js';
+import {
+  defaultProfileResult,
+  getLatestSnapshot,
+  listingLookup,
+  listingName,
+} from '../lib/snapshots.js';
+
+const snapshot = await getLatestSnapshot();
+const {results, date} = snapshot.data;
+const result = defaultProfileResult(results);
+const listings = listingLookup(results);
+const statusLabels = {ok: 'OK', failed: 'Failed', skipped: 'Skipped'};
+const collectedLabels = {
+  structured: 'Structured data',
+  agent: 'Research agent (needs a human check)',
+  manual: 'Entered by hand',
+};
+const score = (value: number | null) =>
+  value === null ? 'Not verified' : formatNumber(value);
+---
+
+<Base
+  title="Sources"
+  description={`Every source behind the ${date} Mac value index snapshot, with retrieval dates and status.`}
+  path="sources/"
+  snapshotDate={date}
+>
+  <h1>Sources</h1>
+  <p>
+    Every figure in the{' '}
+    <a href={withBase(`reports/${date}/`)}>{date} snapshot</a> traces to one of
+    these sources. Each listing in the ranking links to its own source page.
+  </p>
+
+  <section aria-labelledby="price-sources">
+    <h2 id="price-sources">Prices and listings</h2>
+    <div class="table-scroll">
+      <table>
+        <caption>Listing sources for the{date}snapshot</caption>
+        <thead>
+          <tr>
+            <th scope="col">Source</th>
+            <th scope="col">Condition</th>
+            <th scope="col">Collected as</th>
+            <th scope="col">Status</th>
+            <th scope="col" class="num">
+              Listings read
+            </th>
+            <th scope="col">Retrieved</th>
+          </tr>
+        </thead>
+        <tbody>
+          {results.sources.map(source => (
+            <tr>
+              <th scope="row">
+                <a href={source.url} rel="noopener">
+                  {source.name}
+                </a>
+              </th>
+              <td>{conditionLabel(source.condition)}</td>
+              <td>{collectedLabels[source.kind]}</td>
+              <td>
+                {statusLabels[source.status]}
+                {source.error !== null && `: ${source.error}`}
+              </td>
+              <td class="num">{source.listingCount}</td>
+              <td>{source.retrievedDate}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="chip-sources">
+    <h2 id="chip-sources">Chip specifications and benchmarks</h2>
+    <p>
+      Geekbench {results.geekbenchVersion} scores and Apple's stated memory
+      bandwidth, per chip variant. "Not verified" means no citable figure was
+      found; listings with that chip are not ranked.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <caption>Chip variants used by the{date}snapshot</caption>
+        <thead>
+          <tr>
+            <th scope="col">Chip</th>
+            <th scope="col" class="num">
+              Single-core
+            </th>
+            <th scope="col" class="num">
+              Multi-core
+            </th>
+            <th scope="col" class="num">
+              Metal
+            </th>
+            <th scope="col" class="num">
+              Bandwidth (GB/s)
+            </th>
+            <th scope="col">Collected as</th>
+            <th scope="col">Retrieved</th>
+            <th scope="col">Sources and notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {results.chips.map(chip => (
+            <tr>
+              <th scope="row">
+                {chip.family} ({chip.cpuCores.total}-core CPU, {chip.gpuCores}
+                -core GPU)
+              </th>
+              <td class="num">{score(chip.geekbench.singleCore)}</td>
+              <td class="num">{score(chip.geekbench.multiCore)}</td>
+              <td class="num">{score(chip.geekbench.metal)}</td>
+              <td class="num">{score(chip.memoryBandwidthGbPerSec)}</td>
+              <td>{collectedLabels[chip.collectedBy]}</td>
+              <td>{chip.retrievedDate}</td>
+              <td>
+                <details>
+                  <summary>{chip.sources.length} sources</summary>
+                  <ul>
+                    {chip.sources.map(source => (
+                      <li>
+                        <a href={source.url} rel="noopener">
+                          {new URL(source.url).hostname}
+                        </a>
+                        {source.note !== null && `: ${source.note}`}
+                      </li>
+                    ))}
+                  </ul>
+                  {chip.note !== null && <p>{chip.note}</p>}
+                </details>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="exclusions">
+    <h2 id="exclusions">Listings not ranked</h2>
+    {result.exclusions.length === 0 ? (
+      <p>Every listing was ranked.</p>
+    ) : (
+      <details>
+        <summary>
+          {result.exclusions.length} listings excluded under the default profile
+        </summary>
+        <div class="table-scroll">
+          <table>
+            <caption>Excluded listings, with the reason</caption>
+            <thead>
+              <tr>
+                <th scope="col">Configuration</th>
+                <th scope="col">Condition</th>
+                <th scope="col">Reason</th>
+              </tr>
+            </thead>
+            <tbody>
+              {result.exclusions.map(exclusion => {
+                const listing = listings.get(exclusion.listingId);
+                return (
+                  listing !== undefined && (
+                    <tr>
+                      <th scope="row">
+                        <a href={listing.sourceUrl} rel="noopener">
+                          {listingName(listing)}
+                        </a>
+                      </th>
+                      <td>{conditionLabel(listing.condition)}</td>
+                      <td>{exclusion.detail}</td>
+                    </tr>
+                  )
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </details>
+    )}
+  </section>
+</Base>

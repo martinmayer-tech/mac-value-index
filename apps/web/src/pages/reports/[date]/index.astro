@@ -1,0 +1,63 @@
+---
+import {render} from 'astro:content';
+
+import Base from '../../../layouts/Base.astro';
+import {withBase} from '../../../lib/paths.js';
+import {getSnapshots} from '../../../lib/snapshots.js';
+import type {SnapshotEntry} from '../../../lib/snapshots.js';
+
+export async function getStaticPaths() {
+  return (await getSnapshots()).map(snapshot => ({
+    params: {date: snapshot.data.date},
+    props: {snapshot},
+  }));
+}
+
+interface Props {
+  snapshot: SnapshotEntry;
+}
+
+const {snapshot} = Astro.props;
+const {date, isLatest} = snapshot.data;
+const {Content} = await render(snapshot);
+---
+
+<Base
+  title={`Report ${date}`}
+  description={`Mac value index report for the ${date} snapshot: top 10, price bands, new versus refurbished, methodology and sources.`}
+  path={`reports/${date}/`}
+  snapshotDate={date}
+>
+  <nav aria-label="Report downloads" class="no-print">
+    <ul class="downloads">
+      <li>
+        <a
+          href={withBase(`reports/${date}/report.md`)}
+          download={`mac-value-index-${date}.md`}
+        >
+          Download the report (markdown)
+        </a>
+      </li>
+      <li>
+        <a
+          href={withBase(`reports/${date}/ranking.csv`)}
+          download={`mac-value-index-${date}.csv`}
+        >
+          Download the ranking (CSV)
+        </a>
+      </li>
+      <li>
+        <a href={withBase('reports/')}>All reports</a>
+      </li>
+    </ul>
+  </nav>
+  {!isLatest && (
+    <p class="notice" role="note">
+      This is an older snapshot. See the{' '}
+      <a href={withBase('')}>latest ranking</a>.
+    </p>
+  )}
+  <article class="report" data-testid="report">
+    <Content />
+  </article>
+</Base>

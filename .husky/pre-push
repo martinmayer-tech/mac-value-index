@@ -1,0 +1,2 @@
+# Run the pipeline checks before pushing. Skip with: git push --no-verify
+pnpm ci:local --fast

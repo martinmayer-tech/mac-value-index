@@ -1,0 +1,9 @@
+packages:
+  - apps/*
+  - packages/*
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
+overrides:
+  # Patched release for a high-severity advisory reached through @lhci/cli.
+  basic-ftp: '>=6.2.1'
