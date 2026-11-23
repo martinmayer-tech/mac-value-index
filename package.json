@@ -30,15 +30,15 @@
     "@commitlint/cli": "^21.2.4",
     "@commitlint/config-conventional": "^21.2.4",
     "@mvi/config": "workspace:*",
-    "@types/node": "^22.19.0",
-    "@vitest/coverage-v8": "^5.1.0",
+    "@types/node": "^26.6.6",
+    "@vitest/coverage-v8": "^5.1.1",
     "eslint": "^10.15.0",
     "husky": "^9.1.7",
-    "lint-staged": "^17.6.0",
+    "lint-staged": "^17.6.1",
     "prettier": "^3.10.1",
     "prettier-plugin-astro": "^1.1.2",
-    "typescript": "~6.0.3",
-    "vitest": "^5.1.0"
+    "typescript": "~7.0.2",
+    "vitest": "^5.1.1"
   },
   "lint-staged": {
     "*.{ts,tsx,js,mjs,cjs,astro}": [

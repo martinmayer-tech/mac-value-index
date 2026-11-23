@@ -16,10 +16,10 @@
   },
   "dependencies": {
     "@astrojs/preact": "^6.1.6",
-    "@astrojs/sitemap": "^3.7.5",
+    "@astrojs/sitemap": "^3.7.6",
     "@mvi/contracts": "workspace:*",
     "@observablehq/plot": "^0.6.19",
-    "astro": "^7.4.12",
+    "astro": "^7.4.13",
     "jsdom": "^31.0.1",
     "preact": "^11.2.0"
   },
@@ -27,7 +27,7 @@
     "@astrojs/check": "^0.9.12",
     "@axe-core/playwright": "^4.14.0",
     "@lhci/cli": "^0.16.1",
-    "@playwright/test": "1.63.0",
+    "@playwright/test": "1.65.1",
     "@types/jsdom": "^30.0.0",
     "html-validate": "^11.21.1"
   }
